@@ -1,0 +1,75 @@
+{
+  "workshoptitle":"Machine Learning on ADB - Choose your Journey",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction",
+      "filename": "../../intro/intro-mixed-oml-oml4py.md"
+    },
+      {
+        "title": "Get Started",
+        "description": "Get a Free Trial",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
+      },
+      {
+        "title": "OML on ADB Introduction - A",
+        "description": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+      "title": "Lab A1: Provision and Setup",
+      "filename": "../../connect-provision-adb/connect-provision-adb2.md"
+      },
+      {
+        "title": "Lab A2: Create Machine Learning Model",
+        "description": "Explore Zeppelin notebooks and create a ML model on customer credit data set.",
+        "filename":  "../../create-ml-model/create-ml-model2.md"
+      },
+      {
+        "title": "Lab A3: Migrate ML Model to ATP",
+        "description": "Export the ML model from ADW and import into ATP",
+        "type": "freetier",
+        "filename": "../../move-model-to-db/move-model-to-db2.md"
+      },
+      {
+        "title": "Lab A4: Using Prediction in an Application",
+        "description": "Set up the ATP environment, import and APEX application and explore how ADB can be embedded into applications.",
+        "filename": "../../integrate-with-app/integrate-with-app2.md"
+      },        
+      {
+        "title": "OML4PY Introduction - B",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/introduction/introduction.md"
+    },
+      {
+        "title": "Lab B1: Getting Started with OML4Py",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/get-started/get-started.md",
+        "type": "freetier"
+    },
+    {
+        "title": "Lab B2: Select and manipulate data using the Transparency Layer",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/data-slct-mnpn/data-slct-mnpn.md"
+    },
+    {
+        "title": "Lab B3: Use in-database algorithms and models",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/in-db-algo-models/in-db-algo-models.md"
+    },
+    {
+        "title": "Lab B4: Use Datastores to store Python objects",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/dstore-script-repo/dstore-script-repo.md"
+    },
+    {
+        "title": "Lab B5: Run user-defined functions using Embedded Python Execution",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/embd-python/embd-python.md"
+    },
+    {
+        "title": "Lab B6: Use AutoML",
+        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/automl/automl.md"
+    },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}
