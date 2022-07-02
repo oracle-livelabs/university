@@ -44,7 +44,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Data Warehouse** and navigate to your ADW instance.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
@@ -76,7 +76,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Data Warehouse** and navigate to your ADW instance.
 	
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
@@ -138,7 +138,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Data Warehouse** and navigate to your instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 

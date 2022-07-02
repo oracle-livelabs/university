@@ -42,7 +42,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Transaction Processing**, choose your compartment and navigate to your ATP instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     ![](./images/atp-instance.png " ")
 
@@ -151,7 +151,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Transaction Processing**, choose your compartment and navigate to your ATP instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     ![](./images/atp-instance.png " ")
 

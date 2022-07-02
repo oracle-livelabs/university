@@ -38,7 +38,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Data Warehouse** and navigate to your instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
@@ -113,7 +113,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Transaction Processing**, choose your compartment and navigate to your ATP instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     ![](./images/atp-instance.png " ")
 
@@ -145,7 +145,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Transaction Processing**, choose your compartment and navigate to your ATP instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     ![](./images/atp-instance.png " ")
 
@@ -207,7 +207,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Data Warehouse** and navigate to your instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
@@ -233,7 +233,7 @@ This lab assumes you have completed the following labs:
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/storage-buckets.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
 2.  Choose the compartment and click **Create Bucket**.
 
@@ -285,7 +285,7 @@ To load data from the Oracle Cloud Infrastructure(OCI) Object Storage you will n
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Transaction Processing**, choose your compartment and navigate to your ATP instance.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     ![](./images/atp-instance.png " ")
 

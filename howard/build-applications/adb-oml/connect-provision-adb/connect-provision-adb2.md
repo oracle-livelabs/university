@@ -42,7 +42,7 @@ First, we are going to create an ADW Instance.
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Data Warehouse**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
 2.  Choose your **Compartment** by clicking on the drop-down list and then click **Create Autonomous Database**.
 
@@ -80,7 +80,7 @@ You now have created your first ADW instance. Now, we are going to work on very 
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
 2.  Choose your **Compartment** by clicking on the drop-down list and then click **Create Autonomous Database**.
 
@@ -118,7 +118,7 @@ You now have created your first ATP instance.
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Data Warehouse** and navigate to your ADW instance.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
@@ -150,7 +150,7 @@ You now have created your first ATP instance.
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, select **Autonomous Data Warehouse** and navigate to your ADW instance.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
     ![](./images/adw-instance.png " ")
 
