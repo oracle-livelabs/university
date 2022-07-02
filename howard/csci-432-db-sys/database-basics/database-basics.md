@@ -31,7 +31,7 @@ Estimated lab time: 15 minutes
 
 3. Click **Autonomous Data Warehouse**.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
 4. Each student has been granted their own compartment.  This is a logical area that only they have the privleges to update.  Before creating the Autonomous Database, locate your compartment by the student number you were assigned.  This student number is available in Blackboard.  If you don't know your student number, click on the **Needs Help** lab.  Select your compartment under the Spring 2022 section.
 

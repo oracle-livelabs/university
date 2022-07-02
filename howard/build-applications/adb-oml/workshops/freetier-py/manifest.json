@@ -10,7 +10,7 @@
       {
         "title": "Get Started",
         "description": "Get a Free Trial",
-        "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/cloud-login/pre-register-free-tier-account.md"
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
       },
       {
         "title": "OML on ADB Introduction - A",
@@ -39,37 +39,37 @@
       },        
       {
         "title": "OML4PY Introduction - B",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/introduction/introduction.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/introduction/introduction.md"
     },
       {
         "title": "Lab B1: Getting Started with OML4Py",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/get-started/get-started.md",
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/get-started/get-started.md",
         "type": "freetier"
     },
     {
         "title": "Lab B2: Select and manipulate data using the Transparency Layer",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/data-slct-mnpn/data-slct-mnpn.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/data-slct-mnpn/data-slct-mnpn.md"
     },
     {
         "title": "Lab B3: Use in-database algorithms and models",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/in-db-algo-models/in-db-algo-models.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/in-db-algo-models/in-db-algo-models.md"
     },
     {
         "title": "Lab B4: Use Datastores to store Python objects",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/dstore-script-repo/dstore-script-repo.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/dstore-script-repo/dstore-script-repo.md"
     },
     {
         "title": "Lab B5: Run user-defined functions using Embedded Python Execution",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/embd-python/embd-python.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/embd-python/embd-python.md"
     },
     {
         "title": "Lab B6: Use AutoML",
-        "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/data-management-library/oracle-machine-learning/oml4py-adb/automl/automl.md"
+        "filename": "https://oracle-livelabs.github.io/oml/oml4py-adb/automl/automl.md"
     },
       {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-        "filename":"https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/need-help/need-help-freetier.md"
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
       }
     ]
 }

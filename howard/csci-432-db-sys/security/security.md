@@ -34,7 +34,7 @@ You will use the `SH1` schema containing multiple tables such as `CUSTOMERS` or 
 
 4. Click **Autonomous Data Warehouse**.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-adw.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
 
 5. From the Compartment drop down on the left side of the page, expand howarduniversity->spring2022->student1xx and select you student number.
 
