@@ -1,14 +1,10 @@
 {
-    "workshoptitle": "Howard University Database Systems Course",
-    "help": "eugenio.galiano@oracle.com",
+    "workshoptitle": "Applied Database Systems Course",
+    "help":"livelabs-help-db_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
             "filename": "../../introduction/introduction.md"
-        },
-        {
-            "title": "Get Started",
-            "filename": "../../get-started/get-started.md"
         },
         {
             "title": "Get Started",
@@ -25,31 +21,31 @@
         },
         {
             "title": "Lab 3: Low Code Database Application Development",
-            "filename": "../../low-code-db-app-dev/low-code-db-app-dev.md"
-        }, 
+            "filename": "../../low-code-db/low-code-db.md"
+        },
         {
             "title": "Lab 4: Developing with JSON in the Oracle Database",
             "filename": "../../json/json.md"
-        }, 
+        },
         {
-            "title": "Lab 5: Security",
+            "title": "Lab 5: Data Integration",
+            "filename": "../../data-integration/data-integration.md"
+        },
+        {
+            "title": "Lab 6: Database Resiliency - Security",
             "filename": "../../security/security.md"
         },
         {
-            "title": "Lab 6: Intro to Machine Learning",
+            "title": "Lab 7: Intro to Machine Learning",
             "filename": "../../machine-learning/machine-learning.md"
         },
         {
-            "title": "Lab 7: Intro to Graph Database",
+            "title": "Lab 8: Intro to Graph Database on Oracle",
             "filename": "../../graph/graph.md"
-        }, 
+        },
         {
-            "title": "Lab 8: Intro to Spatial",
+            "title": "Lab 9: Intro to Spatial Database on Oracle",
             "filename": "../../spatial/spatial.md"
-        },  
-        {
-            "title": "Need Help?",
-            "filename":"../../need-help/need-help.md"
         },
         {
             "title": "Need Help?",
