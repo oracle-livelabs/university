@@ -1,1 +1,0 @@
-This is the screenshot of the Create Autonomous Database dialog. It shows the Compartment, Display name, and Database name.
