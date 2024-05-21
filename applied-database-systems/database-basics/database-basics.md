@@ -1,5 +1,6 @@
 
 <!-- Updated April 12, 2021 -->
+<!-- Updated May 21, 2024 by Madhusudhan Rao -->
 # Provision Autonomous Database and Connect Using SQL Worksheet
 
 ## Introduction
@@ -31,60 +32,54 @@ Estimated lab time: 15 minutes
 
 3. Click **Autonomous Data Warehouse**.
 
-    ![click autonomous data warehouse](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
+    ![navigation](./images/navigation.png " ")
 
 4. Open your compartment.  This is a logical area that only they have the privileges to update.  
+    
 
-    ![locate compartment](./images/compartment.jpg " ")
+    ![locate compartment](./images/user-compartment.png " ")
+
+    <!-- ![locate compartment](./images/compartment.jpg " ") !-->
     
 ## Task 2: Create the Autonomous Database Instance
 
 1. Click **Create Autonomous Database** to start the instance creation process.
 
-
-    ![click create autonomous database](./images/picture100-23.png " ")
-
+    ![click create autonomous database](./images/create-button.png " ")  
 
 2.  This brings up the __Create Autonomous Database__ screen where you will specify the configuration of the instance.
 3. Provide basic information for the autonomous database:
-
+ 
     - __Choose a compartment__ - Select a compartment for the database from the drop-down list.
     - __Display Name__ - Enter a memorable name for the database for display purposes. For this lab, use __FirstName LastName__ example (John Smith).
-    - __Database Name__ - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not initially supported.) For this lab, use __YOURNAME__ example (JOHNSMITH).
+    - __Database Name__ - Use letters and numbers only, starting with a letter. Maximum length is 14 characters. (Underscores not initially supported.) For this lab, use __YOURNAME__ example (JOHNSMITH). 
 
-    ![example database name](./images/database-name.png " ")
+    ![example database name](./images/adb-install-00.png " ")
 
 4. Choose a workload type. Select the workload type for your database from the choices:
 
     - __Data Warehouse__ - For this lab, choose __Data Warehouse__ as the workload type.
-    - __Transaction Processing__ - Alternately, you could have chosen Transaction Processing as the workload type.
-
-
-    ![choose workload type](./images/picture100-26b.png " ")
-    <b>Only choose the Data Warehouse as workload type for this course.  Do not choose one of the others. Each student is only allowed 1 OCPU instance for ADW.</b>
-
-
-5. Choose a deployment type. Select the deployment type for your database from the choices:
-
-    - __Shared Infrastructure__ - For this lab, choose __Shared Infrastructure__ as the deployment type.
+    - __Transaction Processing__ - Alternately, you could have chosen Transaction Processing as the workload type. 
+    - __Deployment Type__ - For this lab, choose __Serverless__ as the deployment type.
     - __Dedicated Infrastructure__ - Alternately, you could have chosen Dedicated Infrastructure as the workload type.
-
-    ![select deployment type](./images/picture100-26-deployment-type.png " ")
-
-6. Configure the database:
+ 
+    ![choose workload type](./images/adb-install-01.png " ")
+    <b>Only choose the Data Warehouse as workload type for this course.  Do not choose one of the others. Each student is only allowed 2 ECPU instance for ADW (depending upon the resources available for this lab).</b>
+   
+5. Configure the database:
 
     - __Choose database version__ - Leave default - __19c__.
-    - __OCPU count__ - Leave default __1 CPU__. Only 1 OCPU allowed for this course. 
-    - __Storage (TB)__ - Leave default. 
-    - __Auto Scaling__ - Leave default.
-    - __New Database Preview__ - If a checkbox is available to preview a new database version, do __not__ select it.
+    - __OCPU count__ - Leave default __2 ECPU__.  
+    - __Storage (TB)__ - Leave default.
+    - __Compute auto scaling__ - Leave default. 
 
     *Note: You cannot scale up/down an Always Free autonomous database.*
 
-    ![configure the database](./images/picture100-26c.png " ")
-    <b>Autonomous Database instance will be permanently removed by admin if over 1 OCPU.</b>
-
+    ![configure the database](./images/adb-install-02.png " ")
+     
 7. Create administrator credentials:
+
+    - __Backup retention__ - Leave default. 
 
     - __Password and Confirm Password__ - Specify the password for ADMIN user of the service instance. The password must meet the following requirements:
     - The password must be between 12 and 30 characters long and must include at least one uppercase letter, one lowercase letter, and one numeric character.
@@ -94,47 +89,39 @@ Estimated lab time: 15 minutes
     - The password must not be the same password that is set less than 24 hours ago.
     - Re-enter the password to confirm it. Make a note of this password.
 
-    ![create administrator credentials](./images/picture100-26d.png " ")
+    ![create administrator credentials](./images/adb-install-03.png " ")
 
     
 8. Choose network access:
-    - For this lab, accept the default, "Allow secure access from everywhere".
+    - For this lab, accept the default, **Secure access from everywhere**.
    
-    ![choose network access](./images/picture100-26e.png " ")
+    ![choose network access](./images/adb-install-04.png " ")
     
 9. Choose a license type. For this lab, choose __Bring Your Own License (BYOL)__. The two license types are:
 
 10. Click __Create Autonomous Database__.
-
-
-    ![choose license type](./images/picture100-27.png " ")
-
+ 
 11.  Your instance will begin provisioning. In a few minutes the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, CPU count and storage size.
+ 
+    ![choose license type](./images/adb-install-05.png " ")
 
-   ![yellow means provisioning](./images/picture100-32.png " ")
-
-   
+    ![choose license type](./images/adb-install-06.png " ")
+ 
 ## Task 3: Connect with SQL Worksheet
 
 Although you can connect to your autonomous database from local PC desktop tools like Oracle SQL Developer, you can conveniently access the browser-based SQL Worksheet directly from your Autonomous Data Warehouse or Autonomous Transaction Processing console.
 
-1. In your database's details page, click the **Database Actions** button.
+1. In your database's details page, click the **Database Actions** button. select **SQL**
 
-    ![Click the Database Actions button](./images/click-database-actions-button.png " ")
+    ![Click the Database Actions button](./images/db-actions-01.png " ")
 
-   
-2. A sign-in page opens for Database Actions. For this lab, simply use your database instance's default administrator account, **Username - admin**, and click **Next**.
+    You can also view the other database actions that are available.
 
+    ![Click the Database Actions button](./images/db-actions-00.png " ")
+ 
+2. The Database Actions page opens. In the **Development** box, click **SQL**.
 
-    ![Enter the admin username.](./images/picture100-16.png " ")
-
-3. Enter the Administrator **Password** you specified when creating the database. Click **Sign in**.
-
-    ![Enter the admin password.](./images/picture100-16-password.png " ")
-
-4. The Database Actions page opens. In the **Development** box, click **SQL**.
-
-    ![Click on SQL.](./images/picture100-16-click-sql.png " ")
+    ![Click on SQL.](./images/db-actions-04.png " ")
 
 5. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click **Next** to take a tour through the informational boxes.
 
@@ -165,4 +152,8 @@ Run a query on a sample Oracle Autonomous Database data set.
 
 If you are having problems with any of the labs, please visit the Need Help? tab.
 
+## Acknowledgements
 
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, 
+* **Contributors** -  Marion Smith, Senior Technical Program Manager,Eugenio Galiano, Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
+* **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
