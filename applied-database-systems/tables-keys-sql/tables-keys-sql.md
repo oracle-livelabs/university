@@ -55,17 +55,16 @@ Although you can connect to your autonomous database from local PC desktop tools
 
 1. In your database's details page, click the **Database Actions** button.
 
-    ![Click the Database Actions button](./images/click-database-actions-button.png " ")
+    ![Click the Database Actions button](./images/db-actions-01.png " ")
 
 2. The Database Actions page opens. In the **Development** box, click **SQL**.
 
-    ![Click on SQL.](./images/picture100-16-click-sql.png " ")
+    ![Click on SQL.](./images/db-actions-00.png " ")
 
 3. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click **Next** to take a tour through the informational boxes or click X to skip the tour.
 
-    ![Click Next to take tour.](./images/picture100-sql-worksheet.png " ")
-
-
+    ![Click Next to take tour.](./images/db-actions-04.png " ")
+ 
 ## Task 3: Creating Tables
 
 We will be creating a basic company database application to store and manage different data the company uses for operations. We will create the following tables:
@@ -1004,4 +1003,10 @@ Copy the following statements and execute them in SQL. Notice the "CASCADE CONST
 ## Troubleshoot Tips
 
 If you are having problems with any of the labs, please visit the **Need Help?** tab.
+
+## Acknowledgements
+
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, 
+* **Contributors** -  Marion Smith, Senior Technical Program Manager,Eugenio Galiano, Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
+* **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
 
