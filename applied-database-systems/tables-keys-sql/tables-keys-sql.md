@@ -46,7 +46,7 @@ Estimated lab time: 60 minutes
 
     ![click compartment](./images/adb-compartment.jpg " ")  
 
-## Task 2: Connect with SQL Worksheet
+## Task 2: Connect with SQL worksheet
 
 Although you can connect to your autonomous database from local PC desktop tools like Oracle SQL Developer, you can conveniently access the browser-based SQL Worksheet directly from your Autonomous Data Warehouse or Autonomous Transaction Processing console.
 
@@ -63,7 +63,7 @@ Although you can connect to your autonomous database from local PC desktop tools
 
     ![Click Next to take tour.](./images/23c-sql-navigation.png " ") 
  
-## Task 3: Creating Tables
+## Task 3: Creating tables
 
 We will be creating a basic company database application to store and manage different data the company uses for operations. We will create the following tables:
 
@@ -204,9 +204,9 @@ As you are creating the tables, examine the constraints that are being created w
     <copy>CREATE UNIQUE INDEX loc_id_pk ON locations (location_id);</copy> 
     ```
 
-Let’s create the JOB\_HISTORY table which has some different requirements than the other tables we have created so far. First, we don’t want any null values in any of the fields. We want to make sure the information is as complete and accurate as possible, so we have NOT NULL constraints on most columns. Notice department\_id has no such constraint because if a department disappears with a NOT NULL constraint you would be forced to put an invalid department number in that field.
-    
-More interesting is the constraint placed on the table on the last clause. There is a constraint placed on the table, not on a particular column using the CHECK operator that compares the end\_date with the start\_date to make sure the end\_date is later than the start_date. It would be pretty hard to end a job before you start it! This is an example of a table level constraint vs a column level constraint.
+    Let’s create the JOB\_HISTORY table which has some different requirements than the other tables we have created so far. First, we don’t want any null values in any of the fields. We want to make sure the information is as complete and accurate as possible, so we have NOT NULL constraints on most columns. Notice department\_id has no such constraint because if a department disappears with a NOT NULL constraint you would be forced to put an invalid department number in that field.
+        
+    More interesting is the constraint placed on the table on the last clause. There is a constraint placed on the table, not on a particular column using the CHECK operator that compares the end\_date with the start\_date to make sure the end\_date is later than the start_date. It would be pretty hard to end a job before you start it! This is an example of a table level constraint vs a column level constraint.
 
 11.  Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ```
@@ -224,7 +224,7 @@ More interesting is the constraint placed on the table on the last clause. There
 
     ![create table job history](./images/create-table-job-history.png " ")
 
-What about a unique index on this table? Should it be on employee\_id? What if you worked for the same company twice, at different times? If you have a unique index on employee\_id you will not be able to enter that employee into this table more than once. Instead create a composite column unique index. We will select two columns from the table that will guarantee that there are no duplicate entries in the table, but that allow a returning employee’s information to be put into this table.
+    What about a unique index on this table? Should it be on employee\_id? What if you worked for the same company twice, at different times? If you have a unique index on employee\_id you will not be able to enter that employee into this table more than once. Instead create a composite column unique index. We will select two columns from the table that will guarantee that there are no duplicate entries in the table, but that allow a returning employee’s information to be put into this table.
     
 12. In this case we will use the employees start\_date along with the employee\_id to create a unique index on the table. Run the statement below like you have been running the previous statements.
     ```
@@ -326,7 +326,7 @@ For this lab we provide you with the relationships.
     ``` 
     ![alter-table-job-history](./images/alter-table-job-history.png " ")
  
-## Task 5: Loading Data Into the Tables
+## Task 5: Loading data into the tables
 
 Now that we have created tables we need to load some data into them. There are many ways to load data into database tables but the simplest is to insert a row into a table. For each table we will insert data with the INSERT command. Notice that the syntax we are using does not include the column names we are inserting the data into, so there must be a one-to-one match between the values between parenthesis and the corresponding columns in the tables. If there was not a one-to-one match we would have to include the corresponding column name for which we are loading the data into.
 
@@ -454,9 +454,10 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
 7. Load Job History Table
 
-    Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
+    Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button. 
     ```
-    <copy>INSERT INTO job_history VALUES (102 , TO_DATE('13-01-2001', 'dd-MM-yyyy') , TO_DATE('24-07-2006', 'dd-MM-yyyy') , 'IT_PROG' , 60); 
+    <copy>
+    INSERT INTO job_history VALUES (102 , TO_DATE('13-01-2001', 'dd-MM-yyyy') , TO_DATE('24-07-2006', 'dd-MM-yyyy') , 'IT_PROG' , 60); 
     INSERT INTO job_history VALUES (101 , TO_DATE('21-09-1997', 'dd-MM-yyyy') , TO_DATE('27-10-2001', 'dd-MM-yyyy') , 'AC_ACCOUNT' , 110);
     INSERT INTO job_history VALUES (101 , TO_DATE('28-10-2001', 'dd-MM-yyyy') , TO_DATE('15-03-2005', 'dd-MM-yyyy') , 'AC_MGR' , 110);
     INSERT INTO job_history VALUES (201 , TO_DATE('17-02-2004', 'dd-MM-yyyy') , TO_DATE('19-12-2007', 'dd-MM-yyyy') , 'MK_REP' , 20);
@@ -469,30 +470,31 @@ For each of the tables run the corresponding statement. Select all the INSERT st
     </copy>
     ```  
 
-## Task 6: Creating Indexes
+## Task 6: Creating indexes
 
-To improve performance indexes can be created on tables. Now that we loaded data into our tables we create indexes to improve access to the data on the columns that will be queried most often. Run the statements below to create the indexes on the tables. Before copying and pasting the CREATE statements below, make sure you erase anything in your worksheet by clicking on the trash can icon like you have been doing. Once you copy and paste all the CREATE statements into the worksheet you need to select (highlight) all of them because we will run them all at once. If you do not highlight all of them, only the last CREATE statement will run and you will only create one index. Once you selected all the CREATE statements click on the green RUN STATEMENT Arrow. 
-```
+1. To improve performance indexes can be created on tables. Now that we loaded data into our tables we create indexes to improve access to the data on the columns that will be queried most often. Run the statements below to create the indexes on the tables. Before copying and pasting the CREATE statements below, make sure you erase anything in your worksheet by clicking on the trash can icon like you have been doing. Once you copy and paste all the CREATE statements into the worksheet you need to select (highlight) all of them because we will run them all at once. If you do not highlight all of them, only the last CREATE statement will run and you will only create one index. Once you selected all the CREATE statements click on the green RUN STATEMENT Arrow. 
+
+    ```
     <copy>
-    CREATE INDEX emp_department_ix ON employees (department_id);
-    CREATE INDEX emp_job_ix ON employees (job_id);
-    CREATE INDEX emp_manager_ix ON employees (manager_id);
-    CREATE INDEX emp_name_ix ON employees (last_name, first_name);
-    CREATE INDEX dept_location_ix ON departments (location_id);
-    CREATE INDEX jhist_job_ix ON job_history (job_id);
-    CREATE INDEX jhist_employee_ix ON job_history (employee_id);
-    CREATE INDEX jhist_department_ix ON job_history (department_id);
-    CREATE INDEX loc_city_ix ON locations (city);
-    CREATE INDEX loc_state_province_ix ON locations (state_province);
-    CREATE INDEX loc_country_ix ON locations (country_id);
+        CREATE INDEX emp_department_ix ON employees (department_id);
+        CREATE INDEX emp_job_ix ON employees (job_id);
+        CREATE INDEX emp_manager_ix ON employees (manager_id);
+        CREATE INDEX emp_name_ix ON employees (last_name, first_name);
+        CREATE INDEX dept_location_ix ON departments (location_id);
+        CREATE INDEX jhist_job_ix ON job_history (job_id);
+        CREATE INDEX jhist_employee_ix ON job_history (employee_id);
+        CREATE INDEX jhist_department_ix ON job_history (department_id);
+        CREATE INDEX loc_city_ix ON locations (city);
+        CREATE INDEX loc_state_province_ix ON locations (state_province);
+        CREATE INDEX loc_country_ix ON locations (country_id);
     </copy>
-```
+    ```
 
-## Task 7: Creating Views and Querying its Data
+## Task 7: Creating views and querying its data
 
-The Oracle Database allows the creation of objects called views, which consist of a virtual table comprising of columns from other tables. This allows users to view data that does not actually reside in a single table but on multiple tables without actually having to replicate or consolidate the data. This maintains simplicity of development, maintenance, and operations of databases.
+1. The Oracle Database allows the creation of objects called views, which consist of a virtual table comprising of columns from other tables. This allows users to view data that does not actually reside in a single table but on multiple tables without actually having to replicate or consolidate the data. This maintains simplicity of development, maintenance, and operations of databases.
 
- 1. We will create an employee detailed view that joins the employees, jobs, departments, countries, and locations tables to provide us with a consolidated view of employees. 
+2. We will create an employee detailed view that joins the employees, jobs, departments, countries, and locations tables to provide us with a consolidated view of employees. 
     ```
     <copy>CREATE OR REPLACE VIEW emp_details_view
       (employee_id,
@@ -556,7 +558,7 @@ The Oracle Database allows the creation of objects called views, which consist o
 
     ![select-from-emp](./images/select-from-emp.png " ")
  
-## Task 8: LAB Cleanup
+## Task 8: LAB cleanup
 
 ****NOTE: Running the statements below will wipe out your work, only do it if you want to start over or need to clean up your database for any reason*****
 
@@ -585,5 +587,5 @@ If you are having problems with any of the labs, please visit the **Need Help?**
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
 * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
 * **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
-* **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
+* **Last Updated By/Date** - Madhusudhan Rao, June 3rd, 2024
  
