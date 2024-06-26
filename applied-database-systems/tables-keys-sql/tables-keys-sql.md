@@ -4,12 +4,11 @@
 ## Introduction
 
 In this lab we will put into practice some of the concepts you learned in the second lecture, Database Basics part 2, which was about database tables, database keys (primary, secondary, unique, foreign, etc.), and SQL for data manipulation (DML) . 
-
-
+ 
 [](youtube:a6Jm7lYaCWI)
 
 Estimated lab time: 60 minutes
-
+ 
 ### Objectives
 
 -	We will create tables
@@ -23,8 +22,7 @@ Estimated lab time: 60 minutes
 ### Prerequisites
 
 -   This lab requires completion of **Lab 1: Database Basics** section in the Contents menu on the left.  
-
-
+ 
 ## Task 1: Connecting to your Oracle Cloud Database
 
 1. Log in to the Oracle Cloud at <a href="https://cloud.oracle.com">cloud.oracle.com</a>. Cloud Account Name is howarduniversity. Click "Next".
@@ -34,8 +32,7 @@ Estimated lab time: 60 minutes
 
 3. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-    ![navigation menu](./images/picture100-36.png " ")
-
+    ![navigation menu](./images/picture100-36.png " ") 
 
 4. Click **Autonomous Data Warehouse**.
 
@@ -47,23 +44,24 @@ Estimated lab time: 60 minutes
 
 6. Click on the database you created in lab 1
 
-    ![click compartment](./images/adb-compartment.jpg " ")
+    ![click compartment](./images/adb-compartment.jpg " ")  
 
 ## Task 2: Connect with SQL Worksheet
 
 Although you can connect to your autonomous database from local PC desktop tools like Oracle SQL Developer, you can conveniently access the browser-based SQL Worksheet directly from your Autonomous Data Warehouse or Autonomous Transaction Processing console.
 
-1. In your database's details page, click the **Database Actions** button.
+1. On your database's details page. Depending upon if you are using Oracle Autonomous Database, click on **Database actions** and **SQL** 
+   ![Click the Database Actions button](./images/db-actions-01.png " ")
+2. Suppose you are accessing Oracle Database 23ai Free Edition. In that case, you can see the **ORDS** landing page and options to navigate to **SQL Developer Web**, Change the **PDB** name if required, Select **SQL Developer Web**, and click on the **Go** button.
+    ![Click the Database Actions button](./images/23c-ords.png " ")
+    Click the **Database Actions** navigation menu item to see the various available options.
+    ![Click the Database Actions button](./images/23c-database-actions.png " ")  
 
-    ![Click the Database Actions button](./images/db-actions-01.png " ")
+3. The Database Actions page opens. In the **Development** box, click **SQL**.
+  
+4. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click **Next** to take a tour through the informational boxes or click X to skip the tour.
 
-2. The Database Actions page opens. In the **Development** box, click **SQL**.
-
-    ![Click on SQL.](./images/db-actions-00.png " ")
-
-3. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click **Next** to take a tour through the informational boxes or click X to skip the tour.
-
-    ![Click Next to take tour.](./images/db-actions-04.png " ")
+    ![Click Next to take tour.](./images/23c-sql-navigation.png " ") 
  
 ## Task 3: Creating Tables
 
@@ -90,39 +88,32 @@ We will be creating a basic company database application to store and manage dif
     <copy>CREATE TABLE employees
         ( employee_id    NUMBER(6)
         , first_name     VARCHAR2(20)
-        , last_name      VARCHAR2(25)
-          CONSTRAINT     emp_last_name_nn  NOT NULL
-        , email          VARCHAR2(25)
-          CONSTRAINT     emp_email_nn  NOT NULL
+        , last_name      VARCHAR2(25) CONSTRAINT emp_last_name_nn  NOT NULL
+        , email          VARCHAR2(25) CONSTRAINT emp_email_nn  NOT NULL
         , phone_number   VARCHAR2(20)
-        , hire_date      DATE
-          CONSTRAINT     emp_hire_date_nn  NOT NULL
-        , job_id         VARCHAR2(10)
-          CONSTRAINT     emp_job_nn  NOT NULL
+        , hire_date      DATE CONSTRAINT emp_hire_date_nn  NOT NULL
+        , job_id         VARCHAR2(10) CONSTRAINT emp_job_nn  NOT NULL
         , salary         NUMBER(8,2)
         , commission_pct NUMBER(2,2)
         , manager_id     NUMBER(6)
         , department_id  NUMBER(4)
-        , CONSTRAINT     emp_salary_min
-                        CHECK (salary > 0) 
-        , CONSTRAINT     emp_email_uk
-                        UNIQUE (email)
+        , CONSTRAINT     emp_salary_min CHECK (salary > 0) 
+        , CONSTRAINT     emp_email_uk UNIQUE (email)
         ) ;
     </copy> 	
     
-    ``` 
+    ```   
 
     Your results should look similar to this:
 
-    ![create tables for employees](./images/create-tables-employees.png " ")     
+    ![create tables for employees](./images/23c-create-employee.png " ")     
 
 3. In the create table statement we did not specify that employee\_id should be UNIQUE because we will do that by creating a UNIQUE index on the employee\_id. In this case we use an index because most of the time the access to this table will be through the employee_id so we want to make sure we have that column indexed as well as making it UNIQUE.
 
     Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ![click trash can icon](./images/click-trash-can-icon.png " ")
     ```
-    <copy>CREATE UNIQUE INDEX emp_emp_id_pk
-    ON employees (employee_id);
+    <copy>CREATE UNIQUE INDEX emp_emp_id_pk ON employees (employee_id);
     </copy> 	
     
     ``` 
@@ -136,8 +127,7 @@ We will be creating a basic company database application to store and manage dif
     ```
     <copy>CREATE TABLE departments
          ( department_id    NUMBER(4)
-         , department_name  VARCHAR2(30)
-           CONSTRAINT  dept_name_nn  NOT NULL
+         , department_name  VARCHAR2(30) CONSTRAINT  dept_name_nn  NOT NULL
          , manager_id       NUMBER(6)
          , location_id      NUMBER(4)
          ) ;</copy>
@@ -150,10 +140,8 @@ We will be creating a basic company database application to store and manage dif
 5. As with EMPLOYEES make sure department\_id is unique so there are no duplicate department in the company, so we will create a UNIQUE index on department\_id. 
 Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ```
-   <copy>CREATE UNIQUE INDEX dept_id_pk
-    ON departments (department_id);</copy>
-    ```
-
+   <copy>CREATE UNIQUE INDEX dept_id_pk ON departments (department_id);</copy>
+    ``` 
     Your results should look similar to this:
 
     ![create unique index dept](./images/create-unique-index-dept.png " ")
@@ -166,8 +154,7 @@ As you are creating the tables, examine the constraints that are being created w
     ```
     <copy>CREATE TABLE jobs
         ( job_id         VARCHAR2(10)
-        , job_title      VARCHAR2(35)
-          CONSTRAINT     job_title_nn  NOT NULL
+        , job_title      VARCHAR2(35) CONSTRAINT job_title_nn  NOT NULL
         , min_salary     NUMBER(6)
         , max_salary     NUMBER(6)
         ) ;</copy>
@@ -175,33 +162,28 @@ As you are creating the tables, examine the constraints that are being created w
     ```
     Create a unique index on the jobs table to avoid duplicate job id’s.
     ```
-    <copy>CREATE UNIQUE INDEX job_id_pk 
-    ON jobs (job_id) ;</copy>
+    <copy>CREATE UNIQUE INDEX job_id_pk ON jobs (job_id) ;</copy>
     ```
 7. Create the REGIONS table
     ```
     <copy>CREATE TABLE regions
-        ( region_id      NUMBER 
-          CONSTRAINT  region_id_nn NOT NULL 
-        , region_name    VARCHAR2(25) 
+        ( region_id  NUMBER  CONSTRAINT  region_id_nn NOT NULL 
+        , region_name VARCHAR2(25) 
         );</copy>
 
     ```
 
     Create a unique index on the locations table to avoid duplicate region id’s.
     ```
-    <copy>CREATE UNIQUE INDEX reg_id_pk
-    ON regions (region_id);</copy>
+    <copy>CREATE UNIQUE INDEX reg_id_pk ON regions (region_id);</copy>
     ```
 8. Create the COUNTRIES table
     ```
     <copy>CREATE TABLE countries 
-        ( country_id      CHAR(2) 
-          CONSTRAINT  country_id_nn NOT NULL 
+        ( country_id      CHAR(2)  CONSTRAINT  country_id_nn NOT NULL 
         , country_name    VARCHAR2(40) 
         , region_id       NUMBER 
-        , CONSTRAINT     country_c_id_pk 
-                     PRIMARY KEY (country_id) 
+        , CONSTRAINT     country_c_id_pk PRIMARY KEY (country_id) 
         );</copy>
     ```
 
@@ -211,8 +193,7 @@ As you are creating the tables, examine the constraints that are being created w
         ( location_id    NUMBER(4)
         , street_address VARCHAR2(40)
         , postal_code    VARCHAR2(12)
-        , city       VARCHAR2(30)
-          CONSTRAINT     loc_city_nn  NOT NULL
+        , city       VARCHAR2(30) CONSTRAINT loc_city_nn  NOT NULL
         , state_province VARCHAR2(25)
         , country_id     CHAR(2)
         ) ;</copy>
@@ -220,9 +201,7 @@ As you are creating the tables, examine the constraints that are being created w
 
 10. Create a unique index on the regions table to avoid duplicate location id’s
     ```
-    <copy>CREATE UNIQUE INDEX loc_id_pk
-    ON locations (location_id);</copy>
-
+    <copy>CREATE UNIQUE INDEX loc_id_pk ON locations (location_id);</copy> 
     ```
 
 Let’s create the JOB\_HISTORY table which has some different requirements than the other tables we have created so far. First, we don’t want any null values in any of the fields. We want to make sure the information is as complete and accurate as possible, so we have NOT NULL constraints on most columns. Notice department\_id has no such constraint because if a department disappears with a NOT NULL constraint you would be forced to put an invalid department number in that field.
@@ -232,17 +211,12 @@ More interesting is the constraint placed on the table on the last clause. There
 11.  Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ```
     <copy>CREATE TABLE job_history
-        ( employee_id   NUMBER(6)
-          CONSTRAINT    jhist_employee_nn  NOT NULL
-        , start_date    DATE
-          CONSTRAINT    jhist_start_date_nn  NOT NULL
-        , end_date      DATE
-          CONSTRAINT    jhist_end_date_nn  NOT NULL
-        , job_id        VARCHAR2(10)
-          CONSTRAINT    jhist_job_nn  NOT NULL
+        ( employee_id   NUMBER(6) CONSTRAINT jhist_employee_nn  NOT NULL
+        , start_date    DATE CONSTRAINT jhist_start_date_nn  NOT NULL
+        , end_date      DATE CONSTRAINT jhist_end_date_nn  NOT NULL
+        , job_id        VARCHAR2(10) CONSTRAINT jhist_job_nn  NOT NULL
         , department_id NUMBER(4)
-        , CONSTRAINT    jhist_date_interval
-                        CHECK (end_date > start_date)
+        , CONSTRAINT    jhist_date_interval CHECK (end_date > start_date)
         ) ;</copy>
     ```
 
@@ -254,14 +228,12 @@ What about a unique index on this table? Should it be on employee\_id? What if y
     
 12. In this case we will use the employees start\_date along with the employee\_id to create a unique index on the table. Run the statement below like you have been running the previous statements.
     ```
-    <copy>CREATE UNIQUE INDEX jhist_emp_id_st_date_pk 
-    ON job_history (employee_id, start_date);</copy>
+    <copy>CREATE UNIQUE INDEX jhist_emp_id_st_date_pk ON job_history (employee_id, start_date);</copy>
     ```
 
     Your results should look similar to this:
 
     ![create-unique-index-job-history](./images/create-unique-index-job-history.png " ")
-
 
 ## Task 4: Creating table relationships with key constraints
 
@@ -275,10 +247,8 @@ For this lab we provide you with the relationships.
 
     Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ```
-    <copy>ALTER TABLE jobs
-    ADD ( CONSTRAINT job_id_pk
-                     PRIMARY KEY(job_id)
-    );</copy>
+    <copy>ALTER TABLE jobs ADD ( CONSTRAINT job_id_pk PRIMARY KEY(job_id) );
+    </copy>
     ```  
     Your results should look similar to this:
 
@@ -286,10 +256,8 @@ For this lab we provide you with the relationships.
 
 2. Create a primary key constraint on the regions table for the region\_id column.
     ```
-    <copy>ALTER TABLE regions
-    ADD ( CONSTRAINT reg_id_pk
-                      PRIMARY KEY (region_id)
-    );</copy>
+    <copy>ALTER TABLE regions ADD ( CONSTRAINT reg_id_pk PRIMARY KEY (region_id) );
+    </copy>
     ```
     Your results should look similar to this:   
 
@@ -299,11 +267,8 @@ For this lab we provide you with the relationships.
    
     Run the following statement on SQL like you have been doing with the other statements. 
     ```
-    <copy>ALTER TABLE countries
-    ADD ( CONSTRAINT countr_reg_fk
-                FOREIGN KEY (region_id)
-                  REFERENCES regions(region_id) 
-    );</copy>
+    <copy>ALTER TABLE countries ADD ( CONSTRAINT countr_reg_fk FOREIGN KEY (region_id) REFERENCES regions(region_id)  );
+    </copy>
     ``` 
     Your results should look similar to this:   
   
@@ -314,11 +279,9 @@ For this lab we provide you with the relationships.
     Run the following statement:
     ```
     <copy>ALTER TABLE locations
-    ADD ( CONSTRAINT loc_id_pk
-                      PRIMARY KEY (location_id)
-        , CONSTRAINT loc_c_id_fk
-                      FOREIGN KEY (country_id)
-                  REFERENCES countries(country_id) 
+    ADD ( CONSTRAINT loc_id_pk PRIMARY KEY (location_id)
+        , CONSTRAINT loc_c_id_fk FOREIGN KEY (country_id)
+          REFERENCES countries(country_id) 
     );</copy>
     ```
     ![alter-table-locations](./images/alter-table-locations.png " ")
@@ -328,11 +291,9 @@ For this lab we provide you with the relationships.
     Run the following statement:
     ```    
     <copy>ALTER TABLE departments
-    ADD ( CONSTRAINT dept_id_pk
-                      PRIMARY KEY (department_id)
-        , CONSTRAINT dept_loc_fk
-                      FOREIGN KEY (location_id)
-                  REFERENCES locations (location_id)
+    ADD ( CONSTRAINT dept_id_pk PRIMARY KEY (department_id)
+        , CONSTRAINT dept_loc_fk FOREIGN KEY (location_id)
+          REFERENCES locations (location_id)
     );</copy>
     ```
     ![alter-table-dept](./images/alter-table-dept.png " ")
@@ -342,17 +303,10 @@ For this lab we provide you with the relationships.
     Run the following statement:
     ```
     <copy>ALTER TABLE employees
-    ADD ( CONSTRAINT     emp_emp_id_pk
-                         PRIMARY KEY (employee_id)
-        , CONSTRAINT     emp_dept_fk
-                         FOREIGN KEY (department_id)
-                          REFERENCES departments
-        , CONSTRAINT     emp_job_fk
-                         FOREIGN KEY (job_id)
-                          REFERENCES jobs (job_id)
-        , CONSTRAINT     emp_manager_fk
-                         FOREIGN KEY (manager_id)
-                          REFERENCES employees
+    ADD ( CONSTRAINT     emp_emp_id_pk PRIMARY KEY (employee_id)
+        , CONSTRAINT     emp_dept_fk FOREIGN KEY (department_id) REFERENCES departments
+        , CONSTRAINT     emp_job_fk FOREIGN KEY (job_id) REFERENCES jobs (job_id)
+        , CONSTRAINT     emp_manager_fk FOREIGN KEY (manager_id) REFERENCES employees
     );</copy>
     ```
 
@@ -365,21 +319,13 @@ For this lab we provide you with the relationships.
     <copy>ALTER TABLE job_history
     ADD ( CONSTRAINT jhist_emp_id_st_date_pk
           PRIMARY KEY (employee_id, start_date)
-        , CONSTRAINT     jhist_job_fk
-                         FOREIGN KEY (job_id)
-                         REFERENCES jobs
-        , CONSTRAINT     jhist_emp_fk
-                         FOREIGN KEY (employee_id)
-                         REFERENCES employees
-        , CONSTRAINT     jhist_dept_fk
-                         FOREIGN KEY (department_id)
-                         REFERENCES departments
+        , CONSTRAINT jhist_job_fk FOREIGN KEY (job_id) REFERENCES jobs
+        , CONSTRAINT jhist_emp_fk FOREIGN KEY (employee_id) REFERENCES employees
+        , CONSTRAINT jhist_dept_fk FOREIGN KEY (department_id) REFERENCES departments
         ) ;</copy>
-    ```
-
+    ``` 
     ![alter-table-job-history](./images/alter-table-job-history.png " ")
-
-
+ 
 ## Task 5: Loading Data Into the Tables
 
 Now that we have created tables we need to load some data into them. There are many ways to load data into database tables but the simplest is to insert a row into a table. For each table we will insert data with the INSERT command. Notice that the syntax we are using does not include the column names we are inserting the data into, so there must be a one-to-one match between the values between parenthesis and the corresponding columns in the tables. If there was not a one-to-one match we would have to include the corresponding column name for which we are loading the data into.
@@ -388,22 +334,12 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
 1. Load Regions Table 
     ```
-    <copy>INSERT INTO regions VALUES 
-            ( 1
-            , 'Europe' 
-            );
-    INSERT INTO regions VALUES 
-            ( 2
-            , 'Americas' 
-            );
-    INSERT INTO regions VALUES 
-            ( 3
-            , 'Asia' 
-            );
-    INSERT INTO regions VALUES 
-            ( 4
-            , 'Middle East and Africa' 
-            );</copy>
+    <copy>
+    INSERT INTO regions VALUES  ( 1 , 'Europe'  );
+    INSERT INTO regions VALUES  ( 2 , 'Americas'  );
+    INSERT INTO regions VALUES  ( 3 , 'Asia'  );
+    INSERT INTO regions VALUES  ( 4 , 'Middle East and Africa'  );
+    </copy>
     ```
 
     Your results should look similar to this:
@@ -414,21 +350,10 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
     Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO countries VALUES 
-            ( 'US'
-            , 'United States of America'
-            , 2 
-            );
-    INSERT INTO countries VALUES 
-            ( 'CA'
-            , 'Canada'
-            , 2 
-            );
-    INSERT INTO countries VALUES 
-            ( 'UK'
-            , 'United Kingdom'
-            , 1 
-            );</copy>
+    <copy>INSERT INTO countries VALUES  ( 'US' , 'United States of America' , 2  );
+    INSERT INTO countries VALUES  ( 'CA' , 'Canada' , 2  );
+    INSERT INTO countries VALUES  ( 'UK' , 'United Kingdom' , 1  );
+    </copy>
     ```
     Your results should look similar to this:
 
@@ -438,47 +363,13 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
      Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO locations VALUES 
-            ( 1400 
-            , '2014 Jabberwocky Rd'
-            , '26192'
-            , 'Southlake'
-            , 'Texas'
-            , 'US'
-            );
-    INSERT INTO locations VALUES 
-            ( 1500 
-            , '2011 Interiors Blvd'
-            , '99236'
-            , 'South San Francisco'
-            , 'California'
-            , 'US'
-            );
-    INSERT INTO locations VALUES 
-            ( 1700 
-            , '2004 Charade Rd'
-            , '98199'
-            , 'Seattle'
-            , 'Washington'
-            , 'US'
-            );
-    INSERT INTO locations VALUES 
-            ( 1800 
-            , '147 Spadina Ave'
-            , 'M5V 2L7'
-            , 'Toronto'
-            , 'Ontario'
-            , 'CA'
-            );
-
-    INSERT INTO locations VALUES 
-            ( 2500 
-            , 'Magdalen Centre, The Oxford Science Park'
-            , 'OX9 9ZB'
-            , 'Oxford'
-            , 'Oxford'
-            , 'UK'
-            );</copy>
+    <copy>
+    INSERT INTO locations VALUES  ( 1400  , '2014 Jabberwocky Rd' , '26192' , 'Southlake' , 'Texas' , 'US' );
+    INSERT INTO locations VALUES  ( 1500  , '2011 Interiors Blvd' , '99236' , 'South San Francisco' , 'California' , 'US' );
+    INSERT INTO locations VALUES  ( 1700  , '2004 Charade Rd' , '98199' , 'Seattle' , 'Washington' , 'US' );
+    INSERT INTO locations VALUES  ( 1800  , '147 Spadina Ave' , 'M5V 2L7' , 'Toronto' , 'Ontario' , 'CA' ); 
+    INSERT INTO locations VALUES  ( 2500  , 'Magdalen Centre, The Oxford Science Park' , 'OX9 9ZB' , 'Oxford' , 'Oxford' , 'UK' );
+    </copy>
     ```
     Your results should look similar to this:
 
@@ -488,190 +379,47 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
     Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO departments VALUES 
-            ( 10
-            , 'Administration'
-            , 200
-            , 1700
-            );
-    INSERT INTO departments VALUES 
-            ( 20
-            , 'Marketing'
-            , 201
-            , 1800
-            );
-    INSERT INTO departments VALUES 
-            ( 30
-            , 'Purchasing'
-            , 114
-            , 1700
-        );
-    INSERT INTO departments VALUES 
-            ( 50
-            , 'Shipping'
-            , 121
-            , 1500
-            );             
-    INSERT INTO departments VALUES 
-            ( 60 
-            , 'IT'
-            , 103
-            , 1400
-            );        
-    INSERT INTO departments VALUES 
-            ( 80 
-            , 'Sales'
-            , 145
-            , 2500
-            );                
-    INSERT INTO departments VALUES 
-            ( 90 
-            , 'Executive'
-            , 100
-            , 1700
-            );              
-    INSERT INTO departments VALUES 
-            ( 110 
-            , 'Accounting'
-            , 205
-            , 1700
-            );</copy>
+    <copy>
+    INSERT INTO departments VALUES  ( 10 , 'Administration' , 200 , 1700 );
+    INSERT INTO departments VALUES  ( 20 , 'Marketing' , 201 , 1800 );
+    INSERT INTO departments VALUES  ( 30 , 'Purchasing' , 114 , 1700 );
+    INSERT INTO departments VALUES  ( 50 , 'Shipping' , 121 , 1500 );             
+    INSERT INTO departments VALUES  ( 60  , 'IT' , 103 , 1400 ); 
+    INSERT INTO departments VALUES  ( 80  , 'Sales' , 145 , 2500 );                
+    INSERT INTO departments VALUES  ( 90  , 'Executive' , 100 , 1700 );              
+    INSERT INTO departments VALUES  ( 110  , 'Accounting' , 205 , 1700 );
+    </copy>
     ```
     Your results should look similar to this:
 
     ![insert-into-department](./images/insert-into-department.png " ")
- 
-
+  
     Did you get any errors (you probably did not)? If you a see constraint violation don’t worry, we tried to insert a row that violated one of our defined constraints. All the other rows got loaded correctly. One violation does not stop the load process.
 
 5. Load Jobs Table
 
     Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO jobs VALUES 
-            ( 'AD_PRES'
-            , 'President'
-            , 20080
-            , 40000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'AD_VP'
-            , 'Administration Vice President'
-            , 15000
-            , 30000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'AD_ASST'
-            , 'Administration Assistant'
-            , 3000
-            , 6000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'FI_MGR'
-            , 'Finance Manager'
-            , 8200
-            , 16000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'FI_ACCOUNT'
-            , 'Accountant'
-            , 4200
-            , 9000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'AC_MGR'
-            , 'Accounting Manager'
-            , 8200
-            , 16000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'AC_ACCOUNT'
-            , 'Public Accountant'
-            , 4200
-            , 9000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'SA_MAN'
-            , 'Sales Manager'
-            , 10000
-            , 20080
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'SA_REP'
-            , 'Sales Representative'
-            , 6000
-            , 12008
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'PU_MAN'
-            , 'Purchasing Manager'
-            , 8000
-            , 15000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'PU_CLERK'
-            , 'Purchasing Clerk'
-            , 2500
-            , 5500
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'ST_MAN'
-            , 'Stock Manager'
-            , 5500
-            , 8500
-            );
-    INSERT INTO jobs VALUES 
-            ( 'ST_CLERK'
-            , 'Stock Clerk'
-            , 2008
-            , 5000
-            );
-
-    INSERT INTO jobs VALUES 
-            ( 'SH_CLERK'
-            , 'Shipping Clerk'
-            , 2500
-            , 5500
-            );
-    INSERT INTO jobs VALUES 
-            ( 'IT_PROG'
-            , 'Programmer'
-            , 4000
-            , 10000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'MK_MAN'
-            , 'Marketing Manager'
-            , 9000
-            , 15000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'MK_REP'
-            , 'Marketing Representative'
-            , 4000
-            , 9000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'HR_REP'
-            , 'Human Resources Representative'
-            , 4000
-            , 9000
-            );
-    INSERT INTO jobs VALUES 
-            ( 'PR_REP'
-            , 'Public Relations Representative'
-            , 4500
-            , 10500
-            );</copy>
+    <copy>
+    INSERT INTO jobs VALUES  ( 'AD_PRES' , 'President' , 20080 , 40000 );
+    INSERT INTO jobs VALUES  ( 'AD_VP' , 'Administration Vice President' , 15000 , 30000 ); 
+    INSERT INTO jobs VALUES  ( 'AD_ASST' , 'Administration Assistant' , 3000 , 6000 ); 
+    INSERT INTO jobs VALUES  ( 'FI_MGR' , 'Finance Manager' , 8200 , 16000 ); 
+    INSERT INTO jobs VALUES  ( 'FI_ACCOUNT' , 'Accountant' , 4200 , 9000 ); 
+    INSERT INTO jobs VALUES  ( 'AC_MGR' , 'Accounting Manager' , 8200 , 16000 ); 
+    INSERT INTO jobs VALUES  ( 'AC_ACCOUNT' , 'Public Accountant' , 4200 , 9000 );
+    INSERT INTO jobs VALUES  ( 'SA_MAN' , 'Sales Manager' , 10000 , 20080 ); 
+    INSERT INTO jobs VALUES  ( 'SA_REP' , 'Sales Representative' , 6000 , 12008 ); 
+    INSERT INTO jobs VALUES  ( 'PU_MAN' , 'Purchasing Manager' , 8000 , 15000 ); 
+    INSERT INTO jobs VALUES  ( 'PU_CLERK' , 'Purchasing Clerk' , 2500 , 5500 ); 
+    INSERT INTO jobs VALUES  ( 'ST_MAN' , 'Stock Manager' , 5500 , 8500 );
+    INSERT INTO jobs VALUES  ( 'ST_CLERK' , 'Stock Clerk' , 2008 , 5000 ); 
+    INSERT INTO jobs VALUES  ( 'SH_CLERK' , 'Shipping Clerk' , 2500 , 5500 );
+    INSERT INTO jobs VALUES  ( 'IT_PROG' , 'Programmer' , 4000 , 10000 );
+    INSERT INTO jobs VALUES  ( 'MK_MAN' , 'Marketing Manager' , 9000 , 15000 );
+    INSERT INTO jobs VALUES  ( 'MK_REP' , 'Marketing Representative' , 4000 , 9000 );
+    INSERT INTO jobs VALUES  ( 'HR_REP' , 'Human Resources Representative' , 4000 , 9000 );
+    INSERT INTO jobs VALUES   ( 'PR_REP' , 'Public Relations Representative' , 4500 , 10500 );</copy>
     ```
     ![insert-into-job-values](./images/insert-into-job-values.png " ")
 
@@ -679,237 +427,65 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
     Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO employees VALUES 
-            ( 100
-            , 'Steven'
-            , 'King'
-            , 'SKING'
-            , '515.123.4567'
-            , TO_DATE('17-06-2003', 'dd-MM-yyyy')
-            , 'AD_PRES'
-            , 24000
-            , NULL
-            , NULL
-            , 90
-            );
-    INSERT INTO employees VALUES 
-            ( 101
-            , 'Neena'
-            , 'Kochhar'
-            , 'NKOCHHAR'
-            , '515.123.4568'
-            , TO_DATE('21-09-2005', 'dd-MM-yyyy')
-            , 'AD_VP'
-            , 17000
-            , NULL
-            , 100
-            , 90
-            );
-    INSERT INTO employees VALUES 
-            ( 102
-            , 'Lex'
-            , 'De Haan'
-            , 'LDEHAAN'
-            , '515.123.4569'
-            , TO_DATE('13-01-2001', 'dd-MM-yyyy')
-            , 'AD_VP'
-            , 17000
-            , NULL
-            , 100
-            , 90
-            );
-    INSERT INTO employees VALUES 
-            ( 114
-            , 'Den'
-            , 'Raphaely'
-            , 'DRAPHEAL'
-            , '515.127.4561'
-            , TO_DATE('07-12-2002', 'dd-MM-yyyy')
-            , 'PU_MAN'
-            , 11000
-            , NULL
-            , 100
-            , 30
-            );
-    INSERT INTO employees VALUES 
-            ( 122
-            , 'Payam'
-            , 'Kaufling'
-            , 'PKAUFLIN'
-            , '650.123.3234'
-            , TO_DATE('01-05-2003', 'dd-MM-yyyy')
-            , 'ST_MAN'
-            , 7900
-            , NULL
-            , 100
-            , 50
-            );
-    INSERT INTO employees VALUES 
-            ( 149
-            , 'Eleni'
-            , 'Zlotkey'
-            , 'EZLOTKEY'
-            , '011.44.1344.429018'
-            , TO_DATE('29-01-2008', 'dd-MM-yyyy')
-            , 'SA_MAN'
-            , 10500
-            , .2
-            , 100
-            , 80
-            );
-    INSERT INTO employees VALUES 
-            ( 176
-            , 'Jonathon'
-            , 'Taylor'
-            , 'JTAYLOR'
-            , '011.44.1644.429265'
-            , TO_DATE('24-03-2006', 'dd-MM-yyyy')
-            , 'SA_REP'
-            , 8600
-            , .20
-            , 149
-            , 80
-            );
-    INSERT INTO employees VALUES 
-            ( 200
-            , 'Jennifer'
-            , 'Whalen'
-            , 'JWHALEN'
-            , '515.123.4444'
-            , TO_DATE('17-09-2003', 'dd-MM-yyyy')
-            , 'AD_ASST'
-            , 4400
-            , NULL
-            , 101
-            , 10
-            );
-    INSERT INTO employees VALUES 
-            ( 201
-            , 'Michael'
-            , 'Hartstein'
-            , 'MHARTSTE'
-            , '515.123.5555'
-            , TO_DATE('17-02-2004', 'dd-MM-yyyy')
-            , 'MK_MAN'
-            , 13000
-            , NULL
-            , 100
-            , 20
-            );
-    INSERT INTO employees VALUES 
-            ( 202
-            , 'Pat'
-            , 'Fay'
-            , 'PFAY'
-            , '603.123.6666'
-            , TO_DATE('17-08-2005', 'dd-MM-yyyy')
-            , 'MK_REP'
-            , 6000
-            , NULL
-            , 201
-            , 20
-            );</copy>
+    <copy>
+    INSERT INTO employees VALUES  ( 100 , 'Steven' , 'King' , 'SKING' , '515.123.4567' , TO_DATE('17-06-2003', 'dd-MM-yyyy') , 'AD_PRES' 
+    , 24000 , NULL , NULL , 90 );
+    INSERT INTO employees VALUES  ( 101 , 'Neena' , 'Kochhar' , 'NKOCHHAR' , '515.123.4568' , TO_DATE('21-09-2005', 'dd-MM-yyyy') , 'AD_VP'
+    , 17000 , NULL , 100 , 90 );
+    INSERT INTO employees VALUES  ( 102 , 'Lex' , 'De Haan' , 'LDEHAAN' , '515.123.4569' , TO_DATE('13-01-2001', 'dd-MM-yyyy') , 'AD_VP'
+    , 17000 , NULL , 100 , 90 );
+        </copy>
     ```
 
-7. Load Job_History Table
+    > **Note :** Multi-Row Insert: Starting with Oracle Database 23c, the VALUE constructor has been extended so that you can now insert several rows in a single INSERT statement. 
+
+    ```
+    <copy>
+        INSERT INTO employees VALUES 
+        ( 114 , 'Den' , 'Raphaely' , 'DRAPHEAL' , '515.127.4561' , TO_DATE('07-12-2002', 'dd-MM-yyyy') , 'PU_MAN' , 11000 , NULL , 100, 30 ), 
+        ( 122 , 'Payam' , 'Kaufling' , 'PKAUFLIN' , '650.123.3234' , TO_DATE('01-05-2003', 'dd-MM-yyyy'), 'ST_MAN', 7900, NULL, 100, 50),
+        ( 149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '011.44.1344.429018', TO_DATE('29-01-2008', 'dd-MM-yyyy'), 'SA_MAN', 10500, .2, 100, 80),
+        ( 176, 'Jonathon', 'Taylor', 'JTAYLOR', '011.44.1644.429265', TO_DATE('24-03-2006', 'dd-MM-yyyy'), 'SA_REP', 8600, .20, 149, 80),
+        ( 200, 'Jennifer', 'Whalen', 'JWHALEN', '515.123.4444', TO_DATE('17-09-2003', 'dd-MM-yyyy'), 'AD_ASST', 4400, NULL, 101, 10),
+        ( 201, 'Michael', 'Hartstein', 'MHARTSTE', '515.123.5555', TO_DATE('17-02-2004', 'dd-MM-yyyy'), 'MK_MAN', 13000, NULL, 100, 20),
+        ( 202, 'Pat', 'Fay', 'PFAY', '603.123.6666', TO_DATE('17-08-2005', 'dd-MM-yyyy'), 'MK_REP', 6000, NULL, 201, 20);
+     </copy>
+    ``` 
+
+7. Load Job History Table
 
     Select all the INSERT statements and paste them into the SQL Worksheet (make sure you clear the worksheet before each paste by clicking on the trash can icon). After you paste the statements into the worksheet, highlight all of them by left-clicking the mouse and selecting all the rows, then click the green Run Statement button.
     ```
-    <copy>INSERT INTO job_history
-    VALUES (102
-        , TO_DATE('13-01-2001', 'dd-MM-yyyy')
-        , TO_DATE('24-07-2006', 'dd-MM-yyyy')
-        , 'IT_PROG'
-        , 60);
-    INSERT INTO job_history
-    VALUES (101
-        , TO_DATE('21-09-1997', 'dd-MM-yyyy')
-        , TO_DATE('27-10-2001', 'dd-MM-yyyy')
-        , 'AC_ACCOUNT'
-        , 110);
-    INSERT INTO job_history
-    VALUES (101
-        , TO_DATE('28-10-2001', 'dd-MM-yyyy')
-        , TO_DATE('15-03-2005', 'dd-MM-yyyy')
-        , 'AC_MGR'
-        , 110);
-    INSERT INTO job_history
-    VALUES (201
-        , TO_DATE('17-02-2004', 'dd-MM-yyyy')
-        , TO_DATE('19-12-2007', 'dd-MM-yyyy')
-        , 'MK_REP'
-        , 20);
-    INSERT INTO job_history
-    VALUES  (114
-            , TO_DATE('24-03-2006', 'dd-MM-yyyy')
-            , TO_DATE('31-12-2007', 'dd-MM-yyyy')
-            , 'ST_CLERK'
-            , 50
-            );
-    INSERT INTO job_history
-    VALUES  (122
-            , TO_DATE('01-01-2007', 'dd-MM-yyyy')
-            , TO_DATE('31-12-2007', 'dd-MM-yyyy')
-            , 'ST_CLERK'
-            , 50
-            );
-    INSERT INTO job_history
-    VALUES  (200
-            , TO_DATE('17-09-1995', 'dd-MM-yyyy')
-            , TO_DATE('17-06-2001', 'dd-MM-yyyy')
-            , 'AD_ASST'
-            , 90
-            );
-    INSERT INTO job_history
-    VALUES  (176
-            , TO_DATE('24-03-2006', 'dd-MM-yyyy')
-            , TO_DATE('31-12-2006', 'dd-MM-yyyy')
-            , 'SA_REP'
-            , 80
-            );
-    INSERT INTO job_history
-    VALUES  (176
-            , TO_DATE('01-01-2007', 'dd-MM-yyyy')
-            , TO_DATE('31-12-2007', 'dd-MM-yyyy')
-            , 'SA_MAN'
-            , 80
-            );
-    INSERT INTO job_history
-    VALUES  (200
-            , TO_DATE('01-07-2002', 'dd-MM-yyyy')
-            , TO_DATE('31-12-2006', 'dd-MM-yyyy')
-            , 'AC_ACCOUNT'
-            , 90
-            );</copy>
-    ```
-
+    <copy>INSERT INTO job_history VALUES (102 , TO_DATE('13-01-2001', 'dd-MM-yyyy') , TO_DATE('24-07-2006', 'dd-MM-yyyy') , 'IT_PROG' , 60); 
+    INSERT INTO job_history VALUES (101 , TO_DATE('21-09-1997', 'dd-MM-yyyy') , TO_DATE('27-10-2001', 'dd-MM-yyyy') , 'AC_ACCOUNT' , 110);
+    INSERT INTO job_history VALUES (101 , TO_DATE('28-10-2001', 'dd-MM-yyyy') , TO_DATE('15-03-2005', 'dd-MM-yyyy') , 'AC_MGR' , 110);
+    INSERT INTO job_history VALUES (201 , TO_DATE('17-02-2004', 'dd-MM-yyyy') , TO_DATE('19-12-2007', 'dd-MM-yyyy') , 'MK_REP' , 20);
+    INSERT INTO job_history VALUES  (114 , TO_DATE('24-03-2006', 'dd-MM-yyyy') , TO_DATE('31-12-2007', 'dd-MM-yyyy') , 'ST_CLERK' , 50 );
+    INSERT INTO job_history VALUES  (122 , TO_DATE('01-01-2007', 'dd-MM-yyyy') , TO_DATE('31-12-2007', 'dd-MM-yyyy') , 'ST_CLERK' , 50 );
+    INSERT INTO job_history VALUES  (200 , TO_DATE('17-09-1995', 'dd-MM-yyyy') , TO_DATE('17-06-2001', 'dd-MM-yyyy') , 'AD_ASST' , 90 );
+    INSERT INTO job_history VALUES  (176 , TO_DATE('24-03-2006', 'dd-MM-yyyy') , TO_DATE('31-12-2006', 'dd-MM-yyyy') , 'SA_REP' , 80 );
+    INSERT INTO job_history VALUES  (176 , TO_DATE('01-01-2007', 'dd-MM-yyyy') , TO_DATE('31-12-2007', 'dd-MM-yyyy') , 'SA_MAN' , 80 );
+    INSERT INTO job_history VALUES  (200 , TO_DATE('01-07-2002', 'dd-MM-yyyy') , TO_DATE('31-12-2006', 'dd-MM-yyyy') , 'AC_ACCOUNT' , 90 );
+    </copy>
+    ```  
 
 ## Task 6: Creating Indexes
 
 To improve performance indexes can be created on tables. Now that we loaded data into our tables we create indexes to improve access to the data on the columns that will be queried most often. Run the statements below to create the indexes on the tables. Before copying and pasting the CREATE statements below, make sure you erase anything in your worksheet by clicking on the trash can icon like you have been doing. Once you copy and paste all the CREATE statements into the worksheet you need to select (highlight) all of them because we will run them all at once. If you do not highlight all of them, only the last CREATE statement will run and you will only create one index. Once you selected all the CREATE statements click on the green RUN STATEMENT Arrow. 
 ```
-    <copy>CREATE INDEX emp_department_ix
-           ON employees (department_id);
-    CREATE INDEX emp_job_ix
-           ON employees (job_id);
-    CREATE INDEX emp_manager_ix
-           ON employees (manager_id);
-    CREATE INDEX emp_name_ix
-           ON employees (last_name, first_name);
-    CREATE INDEX dept_location_ix
-           ON departments (location_id);
-    CREATE INDEX jhist_job_ix
-           ON job_history (job_id);
-    CREATE INDEX jhist_employee_ix
-           ON job_history (employee_id);
-    CREATE INDEX jhist_department_ix
-           ON job_history (department_id);
-    CREATE INDEX loc_city_ix
-           ON locations (city);
-    CREATE INDEX loc_state_province_ix	
-           ON locations (state_province);
-    CREATE INDEX loc_country_ix
-           ON locations (country_id);</copy>
+    <copy>
+    CREATE INDEX emp_department_ix ON employees (department_id);
+    CREATE INDEX emp_job_ix ON employees (job_id);
+    CREATE INDEX emp_manager_ix ON employees (manager_id);
+    CREATE INDEX emp_name_ix ON employees (last_name, first_name);
+    CREATE INDEX dept_location_ix ON departments (location_id);
+    CREATE INDEX jhist_job_ix ON job_history (job_id);
+    CREATE INDEX jhist_employee_ix ON job_history (employee_id);
+    CREATE INDEX jhist_department_ix ON job_history (department_id);
+    CREATE INDEX loc_city_ix ON locations (city);
+    CREATE INDEX loc_state_province_ix ON locations (state_province);
+    CREATE INDEX loc_country_ix ON locations (country_id);
+    </copy>
 ```
 
 ## Task 7: Creating Views and Querying its Data
@@ -979,7 +555,7 @@ The Oracle Database allows the creation of objects called views, which consist o
     Your results should look similar to this:
 
     ![select-from-emp](./images/select-from-emp.png " ")
-
+ 
 ## Task 8: LAB Cleanup
 
 ****NOTE: Running the statements below will wipe out your work, only do it if you want to start over or need to clean up your database for any reason*****
@@ -998,7 +574,7 @@ Copy the following statements and execute them in SQL. Notice the "CASCADE CONST
     DROP TABLE countries CASCADE CONSTRAINTS;</copy>
     ```
 ![drop-table-clean-up](./images/drop-table-clean-up.png " ")
-
+ 
 
 ## Troubleshoot Tips
 
@@ -1006,7 +582,8 @@ If you are having problems with any of the labs, please visit the **Need Help?**
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, 
-* **Contributors** -  Marion Smith, Senior Technical Program Manager,Eugenio Galiano, Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
+* **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
+* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
 * **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
-
+ 

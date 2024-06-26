@@ -154,6 +154,7 @@ If you are having problems with any of the labs, please visit the Need Help? tab
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, 
-* **Contributors** -  Marion Smith, Senior Technical Program Manager,Eugenio Galiano, Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
+* **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
+* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
 * **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
