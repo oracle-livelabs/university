@@ -127,7 +127,6 @@ Although you can connect to your autonomous database from local PC desktop tools
 
     ![Click Next to take tour.](./images/picture100-sql-worksheet.png " ")
 
-
 ## Task 4: Run scripts in SQL Worksheet
 
 Run a query on a sample Oracle Autonomous Database data set.
@@ -147,6 +146,11 @@ Run a query on a sample Oracle Autonomous Database data set.
 
 4. You can find more sample queries to run in the <a href="https://www.oracle.com/autonomous-database/autonomous-data-warehouse/">ADW documentation.</a>
 
+## Task 5: (Optional) Provision Oracle Autonomous Database 23ai
+
+This video shows how to provide Oracle Autonomous Database 23ai (always free) instance.
+
+[](youtube:1hCK4oF5DZ0)
 
 ## Troubleshoot Tips
 
