@@ -148,7 +148,7 @@ Run a query on a sample Oracle Autonomous Database data set.
 
 ## Task 5: (Optional) Provision Oracle Autonomous Database 23ai
 
-This video shows how to provide Oracle Autonomous Database 23ai (always free) instance.
+This video shows how to provision Oracle Autonomous Database 23ai (always free) instance.
 
 [](youtube:1hCK4oF5DZ0)
 
