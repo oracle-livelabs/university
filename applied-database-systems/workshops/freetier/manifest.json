@@ -4,6 +4,7 @@
   "tutorials": [
     {
       "title": "Introduction",
+      "type": "freetier",
       "filename": "../../introduction/introduction.md"
     },
     {
@@ -13,6 +14,7 @@
     },
     {
       "title": "Lab 1: Database Basics",
+      "type": "freetier",
       "filename": "../../database-basics/database-basics.md"
     },
     {
@@ -24,7 +26,7 @@
       "filename": "../../low-code-db/low-code-db.md"
     },
     {
-      "title": "Lab 4: Developing with JSON in the Oracle Database",
+      "title": "Lab 4: Develop with JSON in the Oracle Database",
       "filename": "../../json/json.md"
     },
     {
@@ -36,15 +38,15 @@
       "filename": "../../security/security.md"
     },
     {
-      "title": "Lab 7: Intro to Machine Learning",
+      "title": "Lab 7: Introduction to Machine Learning",
       "filename": "../../machine-learning/machine-learning.md"
     },
     {
-      "title": "Lab 8: Intro to Graph Database on Oracle",
+      "title": "Lab 8: Introduction to Graph Database on Oracle",
       "filename": "../../graph/graph.md"
     },
     {
-      "title": "Lab 9: Intro to Spatial Database on Oracle",
+      "title": "Lab 9: Introduction to Spatial Database on Oracle",
       "filename": "../../spatial/spatial.md"
     },
     {

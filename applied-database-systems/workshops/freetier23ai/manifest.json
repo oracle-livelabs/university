@@ -4,7 +4,8 @@
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../introduction23ai/introduction.md"
+        "type": "freetier23ai",
+        "filename": "../../introduction/introduction.md"
       },
       {
         "title": "Get Started",
@@ -13,6 +14,7 @@
       },
       {
         "title": "Lab 1: Database Basics",
+        "type": "freetier23ai",
         "filename": "../../database-basics/database-basics.md"
       },
       {
@@ -24,7 +26,7 @@
         "filename": "../../low-code-db/low-code-db.md"
       },
       {
-        "title": "Lab 4: Developing with JSON in the Oracle Database",
+        "title": "Lab 4: Develop with JSON in the Oracle Database",
         "filename": "../../json/json.md"
       },
       {
@@ -40,23 +42,23 @@
         "filename": "../../availability/availability.md"
       },
       {
-        "title": "Lab 8: Intro to Machine Learning",
+        "title": "Lab 8: Introduction to Machine Learning",
         "filename": "../../machine-learning/machine-learning.md"
       },
       {
-        "title": "Lab 9: Intro to Graph Database on Oracle",
+        "title": "Lab 9: Introduction to Graph Database on Oracle",
         "filename": "../../graph/graph.md"
       },
       {
-        "title": "Lab 10: Intro to Spatial Database on Oracle",
+        "title": "Lab 10: Introduction to Spatial Database on Oracle",
         "filename": "../../spatial/spatial.md"
       },
       {
-        "title": "Lab 11: Intro to Artificial Intelligence",
+        "title": "Lab 11: Introduction to Artificial Intelligence",
         "filename": "../../ai/ai.md"
       },
       {
-        "title": "Lab 12: Intro to Vector DB",
+        "title": "Lab 12: Introduction to Vector DB",
         "filename": "../../vector/vector.md"
       },
       {

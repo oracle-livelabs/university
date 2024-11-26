@@ -32,7 +32,7 @@ Estimated lab time: 60 minutes
 
 3. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-    ![navigation menu](./images/picture100-36.png " ") 
+    ![navigation menu](./images/home-page.png " ") 
 
 4. Click **Autonomous Data Warehouse**.
 
@@ -40,7 +40,7 @@ Estimated lab time: 60 minutes
 
 5. From the Compartment drop down on the left side of the page, expand select your compartment.
 
-    ![compartment](./images/hu-compartment.jpg " ")
+    ![Autonomous Database Homepage](./images/adb-home.png "Autonomous Database Homepage")
 
 6. Click on the database you created in lab 1
 
@@ -52,9 +52,7 @@ Although you can connect to your autonomous database from local PC desktop tools
 
 1. On your database's details page. Depending upon if you are using Oracle Autonomous Database, click on **Database actions** and **SQL** 
    ![Click the Database Actions button](./images/db-actions-01.png " ")
-2. Suppose you are accessing Oracle Database 23ai Free Edition. In that case, you can see the **ORDS** landing page and options to navigate to **SQL Developer Web**, Change the **PDB** name if required, Select **SQL Developer Web**, and click on the **Go** button.
-    ![Click the Database Actions button](./images/23c-ords.png " ")
-    Click the **Database Actions** navigation menu item to see the various available options.
+2. Alternatively you can click on **View all database actions** and select select **SQL**
     ![Click the Database Actions button](./images/23c-database-actions.png " ")  
 
 3. The Database Actions page opens. In the **Development** box, click **SQL**.

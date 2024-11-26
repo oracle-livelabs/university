@@ -27,19 +27,20 @@ Estimated lab time: 15 minutes
 1. Log in to the Oracle Cloud.
 2. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-    ![cloud services dashboard](./images/picture100-36.png " ")
+    ![cloud services dashboard](./images/home-page.png " ")  
 
+3. Click on **Oracle Database** > **Autonomous Data Warehouse**.
 
-3. Click **Autonomous Data Warehouse**.
+    ![navigation](./images/redwood-navigation.png " ")
 
-    ![navigation](./images/navigation.png " ")
+    In the left compartment list, select the compartment where you have access to create or use an Oracle Autonomous Database Instance.
 
-4. Open your compartment.  This is a logical area that only they have the privileges to update.  
-    
+    ![cloud services dashboard](./images/adb-home.png " ")
+
+4. Open your compartment.  This is a logical area that only they have the privileges to update.   
 
     ![locate compartment](./images/user-compartment.png " ")
-
-    <!-- ![locate compartment](./images/compartment.jpg " ") !-->
+ 
     
 ## Task 2: Create the Autonomous Database Instance
 
@@ -62,22 +63,29 @@ Estimated lab time: 15 minutes
     - __Transaction Processing__ - Alternately, you could have chosen Transaction Processing as the workload type. 
     - __Deployment Type__ - For this lab, choose __Serverless__ as the deployment type.
     - __Dedicated Infrastructure__ - Alternately, you could have chosen Dedicated Infrastructure as the workload type.
- 
-    ![choose workload type](./images/adb-install-01.png " ")
+  
+    <if type="freetier">
+        ![choose workload type](./images/19cdb.png " ")
+    </if>
+    <if type="freetier23ai">   
+        ![choose workload type](./images/23aidb.png " ")
+    </if>
+
     <b>Only choose the Data Warehouse as workload type for this course.  Do not choose one of the others. Each student is only allowed 2 ECPU instance for ADW (depending upon the resources available for this lab).</b>
    
 5. Configure the database:
-
-    - __Choose database version__ - Leave default - __19c__.
+ 
+    <if type="freetier">
+    - __Choose database version__ - Choose - __19c__.
+    </if>
+    <if type="freetier23ai">   
+    - __Choose database version__ - Leave default - __23ai__.
+    </if>  
     - __OCPU count__ - Leave default __2 ECPU__.  
     - __Storage (TB)__ - Leave default.
     - __Compute auto scaling__ - Leave default. 
-
-    *Note: You cannot scale up/down an Always Free autonomous database.*
-
-    ![configure the database](./images/adb-install-02.png " ")
-     
-7. Create administrator credentials:
+  
+6. Create administrator credentials:
 
     - __Backup retention__ - Leave default. 
 
@@ -92,19 +100,24 @@ Estimated lab time: 15 minutes
     ![create administrator credentials](./images/adb-install-03.png " ")
 
     
-8. Choose network access:
+7. Choose network access:
     - For this lab, accept the default, **Secure access from everywhere**.
    
     ![choose network access](./images/adb-install-04.png " ")
     
-9. Choose a license type. For this lab, choose __Bring Your Own License (BYOL)__. The two license types are:
+8. Choose a license type. For this lab, choose __Bring Your Own License (BYOL)__. The two license types are:
 
-10. Click __Create Autonomous Database__.
+9.  Click __Create Autonomous Database__.
  
-11.  Your instance will begin provisioning. In a few minutes the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, CPU count and storage size.
+10.  Your instance will begin provisioning. In a few minutes the state will turn from Provisioning to Available. At this point, your Autonomous Data Warehouse database is ready to use! Have a look at your instance's details here including its name, database version, CPU count and storage size.
+  
+    <if type="freetier">
+    ![19c information](./images/adb-install-05.png " ")
+    </if>
+    <if type="freetier23ai">   
+    ![23ai information](./images/23ai-general-info.png " ")
+    </if>  
  
-    ![choose license type](./images/adb-install-05.png " ")
-
     ![choose license type](./images/adb-install-06.png " ")
  
 ## Task 3: Connect with SQL Worksheet
@@ -146,11 +159,11 @@ Run a query on a sample Oracle Autonomous Database data set.
 
 4. You can find more sample queries to run in the <a href="https://www.oracle.com/autonomous-database/autonomous-data-warehouse/">ADW documentation.</a>
 
-## Task 5: (Optional) Provision Oracle Autonomous Database 23ai
+<!-- ## Task 5: (Optional) Provision Oracle Autonomous Database 23ai
 
 This video shows how to provision Oracle Autonomous Database 23ai (always free) instance.
 
-[](youtube:1hCK4oF5DZ0)
+[](youtube:1hCK4oF5DZ0) -->
 
 ## Troubleshoot Tips
 
@@ -160,5 +173,5 @@ If you are having problems with any of the labs, please visit the Need Help? tab
 
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
 * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
-* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
-* **Last Updated By/Date** - Madhusudhan Rao, May 21st, 2024
+* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp, Madhusudhan Rao
+* **Last Updated By/Date** - Madhusudhan Rao, Nov 26th, 2024
