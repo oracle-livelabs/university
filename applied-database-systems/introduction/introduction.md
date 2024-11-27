@@ -1,4 +1,4 @@
-# Introduction (19c)
+# Introduction <if type="freetier"> (19c) </if><if type="freetier23ai"> (23ai) </if>
 
 ## About this Course
 
@@ -13,8 +13,8 @@ Welcome to the Applied Database Systems Course.  Through a combination of lectur
 - Low Code Database Application Development
 - Developing Database Applications - Beyond Tables and SQL. Other languages: Python, Node.js and unstructured data (JSON)
 - Data Integration - The key to data centric Data Management
-- Database Resiliency part 1 - Security
-- Database Resiliency part 2 -  Availability
+- Database Security
+- Database Availability - Practice 
 - Introduction to Machine Learning
 - Introduction to Graph Database on Oracle
 - Introduction to Spatial Database on Oracle
@@ -27,11 +27,11 @@ Welcome to the Applied Database Systems Course.  Through a combination of lectur
 - Developing Database Applications - Beyond Tables and SQL. Other languages: Python, Node.js and unstructured data (JSON)
 - Data Integration - The key to data centric Data Management
 - Database Security
-- Database Availability
+- Database Availability - Practice
 - Introduction to Machine Learning
 - Introduction to Graph Database and Analytics
 - Introduction to Spatial Database on Oracle
-- Why is data so important? Data vs Real World Use Cases - Practice
+- Data vs Real World Use Cases - Practice
 - Introduction to Artificial Intelligence, Natural Language Processing (NLP) and Select AI
 - Introduction to Vector Search with Oracle Database 23ai
 </if>

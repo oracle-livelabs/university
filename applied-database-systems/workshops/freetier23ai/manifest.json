@@ -27,14 +27,16 @@
       },
       {
         "title": "Lab 4: Develop with JSON in the Oracle Database",
+        "type": "freetier23ai",
         "filename": "../../json/json.md"
       },
       {
         "title": "Lab 5: Data Integration",
+        "type": "freetier23ai",
         "filename": "../../data-integration/data-integration.md"
       },
       {
-        "title": "Lab 6: Database Resiliency",
+        "title": "Lab 6: Database Security",
         "filename": "../../security/security.md"
       },
       {
@@ -43,10 +45,12 @@
       },
       {
         "title": "Lab 8: Introduction to Machine Learning",
+        "type": "freetier23ai",
         "filename": "../../machine-learning/machine-learning.md"
       },
       {
         "title": "Lab 9: Introduction to Graph Database on Oracle",
+        "type": "freetier23ai",
         "filename": "../../graph/graph.md"
       },
       {
