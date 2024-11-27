@@ -13,8 +13,8 @@ Welcome to the Applied Database Systems Course.  Through a combination of lectur
 - Low Code Database Application Development
 - Developing Database Applications - Beyond Tables and SQL. Other languages: Python, Node.js and unstructured data (JSON)
 - Data Integration - The key to data centric Data Management
-- Database Security
-- Database Availability - Practice 
+- Database Resiliency part 1 - Security
+- Database Resiliency part 2 - Availability
 - Introduction to Machine Learning
 - Introduction to Graph Database on Oracle
 - Introduction to Spatial Database on Oracle
@@ -31,7 +31,7 @@ Welcome to the Applied Database Systems Course.  Through a combination of lectur
 - Introduction to Machine Learning
 - Introduction to Graph Database and Analytics
 - Introduction to Spatial Database on Oracle
-- Data vs Real World Use Cases - Practice
+- Why is data so important? Data vs Real World Use Cases
 - Introduction to Artificial Intelligence, Natural Language Processing (NLP) and Select AI
 - Introduction to Vector Search with Oracle Database 23ai
 </if>
@@ -49,4 +49,4 @@ To complete this course:
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
 * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
 * **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp, Madhusudhan Rao, Priscila Iruela
-* **Last Updated By/Date** - Madhusudhan Rao, Nov 26th, 2024
+* **Last Updated By/Date** - Madhusudhan Rao, Nov 27th, 2024
