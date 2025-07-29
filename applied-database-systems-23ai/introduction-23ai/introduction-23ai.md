@@ -10,7 +10,6 @@ Estimated Workshop Time: 18 hours
 
 - Database Basics part 1 - What are databases, what do they do, what are the basic components?
 - Database Basics part 2 - Tables, Keys, SQL Basics
-- Data Modeling Fundamentals
 - Low Code Database Application Development
 - Developing Database Applications - Beyond Tables and SQL. Other languages: Python, Node.js and unstructured data (JSON)
 - Data Integration
@@ -19,7 +18,6 @@ Estimated Workshop Time: 18 hours
 - Introduction to Machine Learning
 - Introduction to Graph Database and Analytics
 - Introduction to Spatial Database on Oracle
-- Why is data so important? Data vs Real World Use Case
 - Introduction to Generative AI using Select AI
 - Introduction to Vector Search with Oracle Database 23ai
 - Introduction to Data Studio
