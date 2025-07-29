@@ -7,4 +7,4 @@ In Oracle Database 23ai Free - Developer Release the GRAPH_TABLE function and MA
 Estimated Lab Time: 2 hours 30 minutes
 
 ## Task 1: Click on the URL below to start the lab:
-[Intro to Graph Database on Oracle](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3978&clear=RR,180&session=113944359475814)
+[Intro to Graph Database on Oracle](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3978)
