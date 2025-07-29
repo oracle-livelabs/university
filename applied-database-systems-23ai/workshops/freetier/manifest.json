@@ -44,23 +44,23 @@
             "filename": "../../machine-learning-23ai/machine-learning-23ai.md"
         },
         {
-            "title": "Lab 8: Intro to Graph Database on Oracle",
+            "title": "Lab 9: Intro to Graph Database on Oracle",
             "filename": "../../graph-23ai/graph-23ai.md"
         },
         {
-            "title": "Lab 9: Intro to Spatial Database on Oracle",
+            "title": "Lab 10: Intro to Spatial Database on Oracle",
             "filename": "../../spatial-23ai/spatial-23ai.md"
         },
           {
-            "title": "Lab 10: Introduction to Generative AI using Select AI",
+            "title": "Lab 11: Introduction to Generative AI using Select AI",
             "filename": "../../select-ai-23ai/select-ai-23ai.md"
         },
           {
-            "title": "Lab 11: Introduction to Vector Search with Oracle Database 23ai",
+            "title": "Lab 12: Introduction to Vector Search with Oracle Database 23ai",
             "filename": "../../vector-search-23ai/vector-search-23ai.md"
         },
           {
-            "title": "Lab 12: Introduction to Data Studio",
+            "title": "Lab 13: Introduction to Data Studio",
             "filename": "../../data-studio-23ai/data-studio-23ai.md"
         },
         {
