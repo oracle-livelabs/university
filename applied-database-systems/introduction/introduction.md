@@ -1,4 +1,4 @@
-# Introduction <if type="freetier"> (19c) </if><if type="freetier23ai"> (23ai) </if>
+# Introduction  
 
 ## About this Course
 
