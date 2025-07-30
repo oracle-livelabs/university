@@ -95,22 +95,22 @@ We will be creating a basic company database application to store and manage dif
     
     ```   
 
-    Your results should look similar to this:
+Your results should look similar to this:
 
-    ![create tables for employees](./images/23c-create-employee.png " ")     
+![create tables for employees](./images/23c-create-employee.png " ")     
 
-3. In the create table statement we did not specify that employee\_id should be UNIQUE because we will do that by creating a UNIQUE index on the employee\_id. In this case we use an index because most of the time the access to this table will be through the employee_id so we want to make sure we have that column indexed as well as making it UNIQUE.
+1. In the create table statement we did not specify that employee\_id should be UNIQUE because we will do that by creating a UNIQUE index on the employee\_id. In this case we use an index because most of the time the access to this table will be through the employee_id so we want to make sure we have that column indexed as well as making it UNIQUE.
 
     Copy the statement below and paste it into SQL Worksheet. Make sure to erase anything else you have on the worksheet by clicking the trash can icon before pasting this code. To run the code click green arrow circle (Run Statement)
     ![click trash can icon](./images/click-trash-can-icon.png " ")
     ```
     <copy>CREATE UNIQUE INDEX emp_emp_id_pk ON employees (employee_id);
-    </copy> 	
-    
+    </copy> 	 
     ``` 
-    Your results should look similar to this:
+    
+3. Your results should look similar to this:
 
- ![create unique index](./images/create-unique-index.png " ")     
+    ![create unique index](./images/create-unique-index.png " ")     
 
 4. Next create the DEPARTMENTS table. Like with EMPLOYEES there is a constraint that the department\_name not be NULL, so when inserting data into this table, unless department\_name has a value, the insert will fail.
 
@@ -121,7 +121,8 @@ We will be creating a basic company database application to store and manage dif
          , department_name  VARCHAR2(30) CONSTRAINT  dept_name_nn  NOT NULL
          , manager_id       NUMBER(6)
          , location_id      NUMBER(4)
-         ) ;</copy>
+         ) ;
+    </copy>
     ```
 
     Your results should look similar to this:
