@@ -5,7 +5,7 @@
 
 In this lab we will put into practice some of the concepts you learned in the second lecture, Database Basics part 2, which was about database tables, database keys (primary, secondary, unique, foreign, etc.), and SQL for data manipulation (DML) . 
  
-[](youtube:a6Jm7lYaCWI)
+<!-- [](youtube:a6Jm7lYaCWI) -->
 
 Estimated lab time: 60 minutes
  
@@ -26,41 +26,34 @@ Estimated lab time: 60 minutes
 ## Task 1: Connecting to your Oracle Cloud Database
 
 1. Log in to the Oracle Cloud at <a href="https://cloud.oracle.com">cloud.oracle.com</a>. Cloud Account Name is howarduniversity. Click "Next".
-2. Click on "Direct Sign-In" and enter your Cloud Account email and password.
+2. Click on "Sign-In" and enter your Cloud Account email and password.
 
-    ![direct sign in](./images/direct-sign-in.jpg " ")
+     ![direct sign in](./images/tenancy.png " ")  
 
 3. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices.
 
-    ![navigation menu](./images/home-page.png " ") 
+    <!-- ![navigation menu](./images/home-page.png " ")  -->
+    ![database adw](./images/oci-navigation-adb.png " ")
 
 4. Click **Autonomous Data Warehouse**.
 
-    ![database adw](https://oracle-livelabs.github.io/common/images/console/database-adw.png " ")
+    ![database adw](./images/autonomous-databases-page.png " ")
 
-5. From the Compartment drop down on the left side of the page, expand select your compartment.
-
-    ![Autonomous Database Homepage](./images/adb-home.png "Autonomous Database Homepage")
+5. From the Compartment drop down on the left side of the page, expand select your compartment. 
 
 6. Click on the database you created in lab 1
 
-    ![click compartment](./images/adb-compartment.jpg " ")  
+    ![Autonomous Database Homepage](./images/adb-selected.png "Autonomous Database Homepage")
 
 ## Task 2: Connect with SQL worksheet
 
 Although you can connect to your autonomous database from local PC desktop tools like Oracle SQL Developer, you can conveniently access the browser-based SQL Worksheet directly from your Autonomous Data Warehouse or Autonomous Transaction Processing console.
 
-1. On your database's details page. Depending upon if you are using Oracle Autonomous Database, click on **Database actions** and **SQL** 
-   ![Click the Database Actions button](./images/db-actions-01.png " ")
-2. Alternatively you can click on **View all database actions** and select select **SQL**
-    ![Click the Database Actions button](./images/23c-database-actions.png " ")  
-
-3. The Database Actions page opens. In the **Development** box, click **SQL**.
+1. On your database's details page. Depending upon if you are using Oracle Autonomous Database, click on **Database actions** and **SQL**  
+2. Alternatively you can click on **View all database actions** and select select **SQL** 
   
-4. The first time you open SQL Worksheet, a series of pop-up informational boxes introduce you to the main features. Click **Next** to take a tour through the informational boxes or click X to skip the tour.
-
-    ![Click Next to take tour.](./images/23c-sql-navigation.png " ") 
- 
+    ![Autonomous Database Homepage](./images/click-data-load-drop-down.png "Autonomous Database Homepage")
+    
 ## Task 3: Creating tables
 
 We will be creating a basic company database application to store and manage different data the company uses for operations. We will create the following tables:
@@ -583,7 +576,7 @@ If you are having problems with any of the labs, please visit the **Need Help?**
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
-* **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
-* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp
-* **Last Updated By/Date** - Madhusudhan Rao, June 3rd, 2024
+<!-- * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
+* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp -->
+* **Last Updated By/Date** - Madhusudhan Rao, July 30th, 2025
  
