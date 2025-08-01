@@ -12,12 +12,14 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Database Basics",
-            "filename": "https://oracle-livelabs.github.io/university/applied-database-systems/database-basics/database-basics.md"
+          "title": "Lab 1: Database Basics",
+          "type": "freetier23ai",
+          "filename": "../../database-basics-23ai/database-basics-23ai.md"
         },
         {
-            "title": "Lab 2: Tables, Keys, SQL Basics",
-            "filename": "https://oracle-livelabs.github.io/university/applied-database-systems/tables-keys-sql/tables-keys-sql.md"
+          "title": "Lab 2: Tables, Keys, SQL Basics",
+          "type": "freetier23ai",
+          "filename": "../../tables-keys-sql-23ai/tables-keys-sql-23ai.md"
         },
         {
             "title": "Lab 3: Low Code Database Application Development",
