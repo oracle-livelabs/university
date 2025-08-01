@@ -1,60 +1,67 @@
 {
-    "workshoptitle": "Applied Database Systems Course",
-    "help":"livelabs-help-db_us@oracle.com",
-    "tutorials": [
-        {
-            "title": "Introduction",
-            "filename": "../../introduction/introduction.md"
-        },
-        {
-            "title": "Get Started",
-            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
-        },
-        {
-            "title": "Lab 1: Database Basics",
-            "filename": "../../database-basics/database-basics.md"
-        },
-        {
-            "title": "Lab 2: Tables, Keys, SQL Basics",
-            "filename": "../../tables-keys-sql/tables-keys-sql.md"
-        },
-        {
-            "title": "Lab 3: Low Code Database Application Development",
-            "filename": "../../low-code-db/low-code-db.md"
-        },
-        {
-            "title": "Lab 4: Developing with JSON in the Oracle Database",
-            "filename": "../../json/json.md"
-        },
-        {
-            "title": "Lab 5: Data Integration",
-            "filename": "../../data-integration/data-integration.md"
-        },
-        {
-            "title": "Lab 6: Database Resiliency - Security",
-            "filename": "../../security/security.md"
-        },
-        {
-            "title": "Lab 7: Intro to Machine Learning",
-            "filename": "../../machine-learning/machine-learning.md"
-        },
-        {
-            "title": "Lab 8: Intro to Graph Database on Oracle",
-            "filename": "../../graph/graph.md"
-        },
-        {
-            "title": "Lab 9: Intro to Spatial Database on Oracle",
-            "filename": "../../spatial/spatial.md"
-        },
-        {
-            "title": "Need Help?",
-            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
-        },
-        {
-            "title": "Acknowledgements",
-            "filename":"../../acknowledgements/acknowledgements.md"
-        }
-    ]
+  "workshoptitle": "Applied Database Systems Course",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "type": "freetier",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Database Basics",
+      "type": "freetier",
+      "filename": "../../database-basics/database-basics.md"
+    },
+    {
+      "title": "Lab 2: Tables, Keys, SQL Basics",
+      "type": "freetier",
+      "filename": "../../tables-keys-sql/tables-keys-sql.md"
+    },
+    {
+      "title": "Lab 3: Low Code Database Application Development",
+      "filename": "../../low-code-db/low-code-db.md"
+    },
+    {
+      "title": "Lab 4: Develop with JSON in the Oracle Database",
+      "type": "freetier",
+      "filename": "../../json/json.md"
+    },
+    {
+      "title": "Lab 5: Data Integration",
+      "type": "freetier",
+      "filename": "../../data-integration/data-integration.md"
+    },
+    {
+      "title": "Lab 6: Database Resiliency - Security",
+      "filename": "../../security/security.md"
+    },
+    {
+      "title": "Lab 7: Introduction to Machine Learning",
+      "type": "freetier",
+      "filename": "../../machine-learning/machine-learning.md"
+    },
+    {
+      "title": "Lab 8: Introduction to Graph Database on Oracle",
+      "type": "freetier",
+      "filename": "../../graph/graph.md"
+    },
+    {
+      "title": "Lab 9: Introduction to Spatial Database on Oracle",
+      "filename": "../../spatial/spatial.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    },
+    {
+      "title": "Acknowledgements",
+      "filename": "../../acknowledgements/acknowledgements.md"
+    }
+  ]
 }
