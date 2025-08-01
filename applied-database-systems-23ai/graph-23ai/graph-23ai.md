@@ -1,4 +1,4 @@
-# Intro to Graph Database on Oracle
+# Intro to Graph Database and Analytics
 
 This workshop focuses on working with Property Graphs in Oracle Database 23ai Free. You will create a graph from two tables, one containing bank account information, and another containing bank transactions information. You will then run graph pattern queries in SQL on this graph. You will find circular payment chains, multi-hop paths between accounts, and more.
 
@@ -7,4 +7,4 @@ In Oracle Database 23ai Free - Developer Release the GRAPH_TABLE function and MA
 Estimated Lab Time: 2 hours 30 minutes
 
 ## Task 1: Click on the URL below to start the lab:
-[Intro to Graph Database on Oracle](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3978)
+[Intro to Graph Database and Analytics](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3978)
