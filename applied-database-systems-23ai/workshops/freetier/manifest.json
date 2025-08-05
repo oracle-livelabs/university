@@ -13,11 +13,11 @@
         },
         {
           "title": "Lab 1: Database Basics",
-          "filename": "../../database-basics-23ai/database-basics-23ai.md"
+          "filename": "../../../applied-database-systems/database-basics/database-basics.md"
         },
         {
           "title": "Lab 2: Tables, Keys, SQL Basics",
-          "filename": "../../tables-keys-sql-23ai/tables-keys-sql-23ai.md"
+          "filename": "../../../applied-database-systems/tables-keys-sql/tables-keys-sql.md"
         },
         {
             "title": "Lab 3: Low Code Database Application Development",
