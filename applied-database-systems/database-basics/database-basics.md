@@ -185,11 +185,11 @@ Run a query on a sample Oracle Autonomous Database data set.
   
 ## Troubleshoot Tips
 
-If you are having problems with any of the labs, please visit the Need Help? tab.
+If you are having problems with any of the labs, please visit the [Need Help?](https://livelabs.oracle.com/cdn/university/applied-database-systems/workshops/freetier/index.html?customTrackingParam=:ow:lp:cpo::::RC_WWMK211125P00013:llid=3412&lab=need-help-freetier#) lab.
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, Priscila Iruela, Senior Principal Technical Program Manager
 <!-- * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
 * **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp, Madhusudhan Rao -->
-* **Last Updated By/Date** - Madhusudhan Rao, 30th July, 2025
+* **Last Updated By/Date** - Priscila Iruela, August 2025
