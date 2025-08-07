@@ -572,12 +572,10 @@ Copy the following statements and execute them in SQL. Notice the "CASCADE CONST
 
 ## Troubleshoot Tips
 
-If you are having problems with any of the labs, please visit the **Need Help?** tab.
+If you are having problems with any of the labs, please visit the [Need Help?](https://livelabs.oracle.com/cdn/university/applied-database-systems-23ai/workshops/freetier/index.html?customTrackingParam=:ow:lp:cpo::::RC_WWMK211125P00013:llid=4216&lab=need-help-freetier#) tab.
 
 ## Acknowledgements
 
-* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database 
-<!-- * **Author** - Marion Smith, Senior Technical Program Manager,Eugenio Galiano
-* **Contributors** - Kay Malcolm, Paige Hanssen, Beda Hammerschmidt, Patrick Wheeler, Jayant  Mahto, Russ Lowenthal, Marcos Arancibia Coddou, Jayant Sharma, David Lapp -->
-* **Last Updated By/Date** - Madhusudhan Rao, July 30th, 2025
- 
+* **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, Priscila Iruela, Senior Principal Technical Program Manager
+* **Contributors** -  Ankita Beri, Apoorva Srinivas, Beda Hammerschmidt, Jayant Mahto, Russ Lowenthal, Markus Michalewicz, Mark Hornick, Denise Myrick, Ramu Murakami, David Lapp, Mike Blackmore, Sean Stacey, William Endress, Eli Schilling, Doug Hood, Jayant Sharma, Kishore Katta, Julian Dontcheff, Paul Parkinson, Chaitanya Koratamaddi, Vishal Singh, Melliyal Annamalai, Maria Colgan
+* **Last Updated By/Date** - Priscila Iruela, August 2025
