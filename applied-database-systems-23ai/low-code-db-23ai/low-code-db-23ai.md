@@ -6,7 +6,7 @@ When individual users log into the app, the home page will display their own uni
 
 While the end result is a simple version of a movies watchlist application, you can continue to build it out far past what this workshop takes you through, using many of the same concepts you will learn. The Movie Database API has a lot of options that you can use in your application, such as streaming providers for individual movies, videos related to movies, upcoming movies, and more. There are also a lot of features in Oracle APEX that you can use to allow users to rate movies they have watched, make comments on movies, and more.
 
-Estimated Lab Time: 2 hours 15 minutes
+Estimated Lab Time: 2 hours
 
 ## Task 1: Click on the URL below to start the lab:
 [Low Code Database Application Development](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=942)
