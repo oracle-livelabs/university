@@ -1,4 +1,4 @@
-# Developing database applications  - Other languages Python, Node.js and unstructured data (JSON)
+# Developing Database Applications with Unstructured Data (JSON)
 
 In this workshop, you will experience Oracle's JSON capabilities using both relational and document-store APIs. You will be learn all variants of how to leverage JSON in the Oracle database, starting from the native JSON datatype over JSON Collections and JSON Duality Views - the latest groundbreaking JSON-related functionality, to the Oracle Database API for MongoDB that provides full MongoDB compatibility in a plug-and-play fashion
 
@@ -11,6 +11,5 @@ You can complete all Oracle-related parts of the workshop using your web browser
 
 Estimated Lab Time: 60 minutes
 
-
 ## Task 1: Click on the URL below to start the lab:
-[Developing Database Applications - JSON](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3635)
+[Developing Database Applications with Unstructured Data (JSON)](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3635)

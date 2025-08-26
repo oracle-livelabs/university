@@ -11,7 +11,7 @@ Estimated Workshop Time: 18 hours
 - Database Basics part 1 - What are databases, what do they do, what are the basic components?
 - Database Basics part 2 - Tables, Keys, SQL Basics
 - Low Code Database Application Development
-- Developing Database Applications - Beyond Tables and SQL. Other languages: Python, Node.js and unstructured data (JSON)
+- Developing Database Applications with Unstructured Data (JSON)
 - Data Integration
 - Database Security
 - Database Availability
