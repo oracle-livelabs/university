@@ -2,11 +2,11 @@
 <!-- Updated July 30, 2025 by Madhusudhan Rao -->
 <!-- Updated April 12, 2021 -->
 <!-- Updated May 21, 2024 by Madhusudhan Rao -->
-# Provision Autonomous Database and Connect Using SQL Worksheet
+# Provision Autonomous AI Database and Connect Using SQL Worksheet
 
 ## Introduction
 
-This lab walks you through the steps to quickly provision an Oracle Autonomous Database on Oracle Cloud. You will use this database in subsequent labs of this workshop. In this lab, you will then connect to the database using SQL Worksheet, a browser-based tool that is easily accessible from the Autonomous Data Warehouse.
+This lab walks you through the steps to quickly provision an Oracle Autonomous AI Database on Oracle Cloud. You will use this database in subsequent labs of this workshop. In this lab, you will then connect to the database using SQL Worksheet, a browser-based tool that is easily accessible from the Autonomous Data Warehouse.
 
 <!-- [](youtube:a6Jm7lYaCWI) -->
 
@@ -14,7 +14,7 @@ Estimated lab time: 15 minutes
 
 ### Objectives
 
--   Provision a new Autonomous Data Warehouse
+-   Provision a new Autonomous AI Database Lakehouse
 -   Learn how to connect to your new autonomous database using SQL Worksheet
 
 
@@ -23,18 +23,18 @@ Estimated lab time: 15 minutes
 -   This lab requires completion of the **Get Started** section in the Contents menu on the left.  
 
 
-## Task 1: Choose ADW from the Services Menu
+## Task 1: Choose ADW or Lakehouse from the Services Menu
 
 1. Log in to the Oracle Cloud.
 2. Once you are logged in, you are taken to the cloud services dashboard where you can see all the services available to you. Click the navigation menu in the upper left to show top level navigation choices. 
 
-3. Click on **Oracle Database** > **Autonomous Data Warehouse**.
+3. Click on **Oracle AI Database** > **Autonomous Data Warehouse or Lakehouse**.
 
     ![navigation](./images/redwood-navigation.png " ")
 
-    Select the compartment where you have access to create or use an Oracle Autonomous Database Instance. 
+    Select the compartment where you have access to create or use an Oracle Autonomous AI Database Instance. 
 
-    Click on **Create Autonomous Database** button
+    Click on **Create Autonomous AI Database** button
 
     ![locate compartment](./images/autonomous-databases-page.png " ")
 
@@ -42,9 +42,9 @@ Estimated lab time: 15 minutes
     > Note: Avoid the use of the **ManagedCompartmentforPaaS** compartment as this is an Oracle default used for Oracle Platform Services.
  
     
-## Task 2: Create the Autonomous Database Instance
+## Task 2: Create the Autonomous AI Database Instance
  
-1.  This brings up the __Create Autonomous Database__ screen where you will specify the configuration of the instance.
+1.  This brings up the __Create Autonomous AI Database__ screen where you will specify the configuration of the instance.
 2. Provide basic information for the autonomous database:
   
     - __Display Name__ - Enter a memorable name for the database for display purposes. For this lab, use __FirstName LastName__ example (John Smith).
@@ -55,23 +55,25 @@ Estimated lab time: 15 minutes
 
 3. Choose a workload type. Select the workload type for your database from the choices:
 
-    - __Data Warehouse__ - For this lab, choose __Data Warehouse__ as the workload type.
+    - __Data Warehouse or Lakehouse__ - For this lab, choose __Data Warehouse__ as the workload type.
     - __Transaction Processing__ - Alternately, you could have chosen Transaction Processing as the workload type. 
+    - __JSON__ - Alternately, you could have chosen JSON as the workload type. 
+    - __APEX__ - Alternately, you could have chosen APEX as the workload type. 
     - __Deployment Type__ - For this lab, choose __Serverless__ as the deployment type.
     - __Dedicated Infrastructure__ - Alternately, you could have chosen Dedicated Infrastructure as the workload type.
 
     ![Create Workload](./images/adb-create-screen-workload.png " ")
 
-    <b>Choose the Data Warehouse as workload type for this course.  Do not choose one of the others. Each student is only allowed 2 ECPU instance for ADW (depending upon the resources available for this lab).</b>
+    <b>Choose the Data Warehouse or Lakehouse as workload type for this course.  Do not choose one of the others. Each student is only allowed 2 ECPU instance for ADW or Lakehouse (depending upon the resources available for this lab).</b>
  
   
     <if type="freetier">
-    Choose database version: Select **19c** for the database version from this drop-down list.
+    Choose database version: Select **26ai** for the database version from this drop-down list.
 
     ![choose workload type](./images/create-19c.png " ")
     </if>
-    <if type="freetier23ai">   
-    Choose database version: Select **23ai** for the database version from this drop-down list.
+    <if type="freetieraidb">   
+    Choose database version: Select **23ai or 26ai** for the database version from this drop-down list.
 
     ![choose workload type](./images/adb-create-database-configuration.png " ")
     </if>
@@ -160,7 +162,7 @@ Although you can connect to your autonomous database from local PC desktop tools
 
 Run a query on a sample Oracle Autonomous Database data set.
 
-1. Copy and paste the code snippet below to your SQL Worksheet. One of the two ADW sample data sets that you can access from any ADW instance. Take a moment to examine the script. Make sure you click the Run Statement button to run it in SQL Worksheet so that all the rows display on the screen.
+1. Copy and paste the code snippet below to your SQL Worksheet. One of the two ADW or Lakehouse sample data sets that you can access from any ADW or Lakehouse instance. Take a moment to examine the script. Make sure you click the Run Statement button to run it in SQL Worksheet so that all the rows display on the screen.
   
         <copy>
         select sysdate from dual; 
@@ -179,16 +181,16 @@ Run a query on a sample Oracle Autonomous Database data set.
 
 2. Take a look at the output response from your Autonomous Data Warehouse.
 
-3. When possible, ADW also caches the results of a query for you.  If you run identical queries more than once, you will notice a much shorter response time when your results have been cached.
+3. When possible, ADW or Lakehouse also caches the results of a query for you.  If you run identical queries more than once, you will notice a much shorter response time when your results have been cached.
 
 4. You can find more sample queries to run in the <a href="https://www.oracle.com/autonomous-database/autonomous-data-warehouse/">ADW documentation.</a>
   
 ## Troubleshoot Tips
 
-If you are having problems with any of the labs, please visit the [Need Help?](https://livelabs.oracle.com/cdn/university/applied-database-systems-23ai/workshops/freetier/index.html?customTrackingParam=:ow:lp:cpo::::RC_WWMK211125P00013:llid=4216&lab=need-help-freetier#) tab.
+If you are having problems with any of the labs, please visit the [Need Help?](https://livelabs.oracle.com/cdn/university/applied-database-systems-ai-db/workshops/freetier/index.html?customTrackingParam=:ow:lp:cpo::::RC_WWMK211125P00013:llid=4216&lab=need-help-freetier#) tab.
 
 ## Acknowledgements
 
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, Priscila Iruela, Senior Principal Technical Program Manager
 * **Contributors** -  Ankita Beri, Apoorva Srinivas, Beda Hammerschmidt, Jayant Mahto, Russ Lowenthal, Markus Michalewicz, Mark Hornick, Denise Myrick, Ramu Murakami, David Lapp, Mike Blackmore, Sean Stacey, William Endress, Eli Schilling, Doug Hood, Jayant Sharma, Kishore Katta, Julian Dontcheff, Paul Parkinson, Chaitanya Koratamaddi, Vishal Singh, Melliyal Annamalai, Maria Colgan
-* **Last Updated By/Date** - Priscila Iruela, August 2025
+* **Last Updated By/Date** - Priscila Iruela, October 2025

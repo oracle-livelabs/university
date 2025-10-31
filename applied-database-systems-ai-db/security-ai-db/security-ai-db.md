@@ -1,6 +1,6 @@
 # Database Security
 
-This workshop is a hands-on lab dedicated to the features and functionality of Oracle Database security to prevent, detect and mitigate the most common cyberattacks performed on Oracle Databases - for more details on each of the featured products, please refer to the DB Security livelabs.
+This workshop is a hands-on lab dedicated to the features and functionality of Oracle AI Database security to prevent, detect and mitigate the most common cyberattacks performed on Oracle AI Databases - for more details on each of the featured products, please refer to the DB Security livelabs.
 
 In this lab, we will use a ransomware attack to explore how attackers operate and what database features you should use to prevent, detect, and mitigate data exfiltration risks.
 
