@@ -1,0 +1,8 @@
+# Intro to Machine Learning
+
+In this workshop, you will test drive Oracle Machine Learning on Oracle Autonomous AI Database. You will explore OML Notebooks by creating notebooks, setting the service level, and scheduling a notebook job. In the Introduction to OML4SQL lab, you will use the SQL API via notebooks to implement a short data science project that forecasts product sales using a time series model. In the Introduction to OML4Py lab, you will use OML4Py to create a proxy object, explore and prepare data, build and evaluate models, and use those models to score data. In the next lab, Introduction to OML4R, you will use OML4R to create a proxy object, explore and prepare data, build and evaluate models, and use those models to score data. In the Introduction to OML AutoML UI lab, you will use the no-code user interface OML AutoML UI to run an experiment that builds and ranks models, and deploy a Naive-Bayes classifier. You will also explore a notebook generated from a model produced by the experiment. Finally, in the Introduction to Oracle Machine Learning Services lab, you will score singleton and mini-batch records with a Naive-Bayes classifier and use the Cognitive Text feature to analyze a text string.
+
+Estimated Lab Time: 2 hours 30 minutes
+
+## Task 1: Click on the URL below to start the lab:
+[Intro to Machine Learning](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=922)

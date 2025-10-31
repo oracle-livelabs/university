@@ -1,10 +1,10 @@
 {
-    "workshoptitle": "Applied Database Systems 23ai Course",
+    "workshoptitle": "Applied Database Systems using Oracle AI Database Course",
     "help":"livelabs-help-db_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
-            "filename": "../../introduction-23ai/introduction-23ai.md"
+            "filename": "../../introduction-ai-db/introduction-ai-db.md"
         },
         {
             "title": "Get Started",
@@ -13,55 +13,55 @@
         },
         {
           "title": "Lab 1: Database Basics",
-          "filename": "../../database-basics-23ai/database-basics-23ai.md"
+          "filename": "../../database-basics-ai-db/database-basics-ai-db.md"
         },
         {
           "title": "Lab 2: Tables, Keys, SQL Basics",
-          "filename": "../../tables-keys-sql-23ai/tables-keys-sql-23ai.md"
+          "filename": "../../tables-keys-sql-ai-db/tables-keys-sql-ai-db.md"
         },
         {
             "title": "Lab 3: Low Code Database Application Development",
-            "filename": "../../low-code-db-23ai/low-code-db-23ai.md"
+            "filename": "../../low-code-db-ai-db/low-code-db-ai-db.md"
         },
         {
             "title": "Lab 4: Developing Database Applications with Unstructured Data (JSON)",
-            "filename": "../../json-23ai/json-23ai.md"
+            "filename": "../../json-ai-db/json-ai-db.md"
         },
         {
             "title": "Lab 5: Data Integration",
-            "filename": "../../data-integration-23ai/data-integration-23ai.md"
+            "filename": "../../data-integration-ai-db/data-integration-ai-db.md"
         },
         {
             "title": "Lab 6: Database Security",
-            "filename": "../../security-23ai/security-23ai.md"
+            "filename": "../../security-ai-db/security-ai-db.md"
         },
         {
             "title": "Lab 7: Database Availability",
-            "filename": "../../availability-23ai/availability-23ai.md"
+            "filename": "../../availability-ai-db/availability-ai-db.md"
         },
         {
             "title": "Lab 8: Intro to Machine Learning",
-            "filename": "../../machine-learning-23ai/machine-learning-23ai.md"
+            "filename": "../../machine-learning-ai-db/machine-learning-ai-db.md"
         },
         {
             "title": "Lab 9: Intro to Graph Database and Analytics",
-            "filename": "../../graph-23ai/graph-23ai.md"
+            "filename": "../../graph-ai-db/graph-ai-db.md"
         },
         {
             "title": "Lab 10: Intro to Spatial Database on Oracle",
-            "filename": "../../spatial-23ai/spatial-23ai.md"
+            "filename": "../../spatial-ai-db/spatial-ai-db.md"
         },
           {
             "title": "Lab 11: Introduction to Generative AI using Select AI",
-            "filename": "../../select-ai-23ai/select-ai-23ai.md"
+            "filename": "../../select-ai-db/select-ai-db.md"
         },
           {
-            "title": "Lab 12: Introduction to Vector Search with Oracle Database 23ai",
-            "filename": "../../vector-search-23ai/vector-search-23ai.md"
+            "title": "Lab 12: Introduction to Vector Search with Oracle AI Database 26ai",
+            "filename": "../../vector-search-ai-db/vector-search-ai-db.md"
         },
           {
             "title": "Lab 13: Introduction to Data Studio",
-            "filename": "../../data-studio-23ai/data-studio-23ai.md"
+            "filename": "../../data-studio-ai-db/data-studio-ai-db.md"
         },
         {
             "title": "Need Help?",

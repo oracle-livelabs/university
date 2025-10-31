@@ -1,4 +1,4 @@
-# Introduction to Vector Search with Oracle Database 23ai
+# Introduction to Vector Search with Oracle AI Database 26ai
 
 This workshop will cover what AI Vector Search is and how it works. Included will be hands on exercises to:
 
@@ -15,4 +15,4 @@ To wrap up the lab the user will then use the data and queries defined in the la
 Estimated Lab Time: 60 minutes
 
 ## Task 1: Click on the URL below to start the lab:
-[Introduction to Vector Search with Oracle Database 23ai](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=4166)
+[Introduction to Vector Search with Oracle AI Database 26ai](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=4166)

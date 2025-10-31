@@ -35,7 +35,7 @@ Estimated lab time: 60 minutes
     <!-- ![navigation menu](./images/home-page.png " ")  -->
     ![database adw](./images/oci-navigation-adb.png " ")
 
-4. Click **Autonomous Data Warehouse**.
+4. Click **Autonomous AI Database Data Warehouse or Lakehouse**.
 
     ![database adw](./images/autonomous-databases-page.png " ")
 
@@ -52,7 +52,7 @@ Although you can connect to your autonomous database from local PC desktop tools
 1. On your database's details page. Depending upon if you are using Oracle Autonomous Database, click on **Database actions** and **SQL**  
 2. Alternatively you can click on **View all database actions** and select select **SQL** 
   
-    ![Autonomous Database Homepage](./images/click-data-load-drop-down.png "Autonomous Database Homepage")
+    ![Autonomous Database Homepage](./images/click-data-load-drop-down.png "Autonomous Database AI Homepage")
     
 ## Task 3: Creating tables
 
@@ -429,7 +429,7 @@ For each of the tables run the corresponding statement. Select all the INSERT st
         </copy>
     ```
 
-    > **Note :** Multi-Row Insert: Starting with Oracle Database 23c, the VALUE constructor has been extended so that you can now insert several rows in a single INSERT statement. 
+    > **Note :** Multi-Row Insert: Starting with Oracle AI Database 26ai, the VALUE constructor has been extended so that you can now insert several rows in a single INSERT statement. 
 
     ```
     <copy>
@@ -484,7 +484,7 @@ For each of the tables run the corresponding statement. Select all the INSERT st
 
 ## Task 7: Creating views and querying its data
 
-1. The Oracle Database allows the creation of objects called views, which consist of a virtual table comprising of columns from other tables. This allows users to view data that does not actually reside in a single table but on multiple tables without actually having to replicate or consolidate the data. This maintains simplicity of development, maintenance, and operations of databases.
+1. The Oracle AI Database allows the creation of objects called views, which consist of a virtual table comprising of columns from other tables. This allows users to view data that does not actually reside in a single table but on multiple tables without actually having to replicate or consolidate the data. This maintains simplicity of development, maintenance, and operations of databases.
 
 2. We will create an employee detailed view that joins the employees, jobs, departments, countries, and locations tables to provide us with a consolidated view of employees. 
     ```
@@ -578,4 +578,4 @@ If you are having problems with any of the labs, please visit the [Need Help?](h
 
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, Priscila Iruela, Senior Principal Technical Program Manager
 * **Contributors** -  Ankita Beri, Apoorva Srinivas, Beda Hammerschmidt, Jayant Mahto, Russ Lowenthal, Markus Michalewicz, Mark Hornick, Denise Myrick, Ramu Murakami, David Lapp, Mike Blackmore, Sean Stacey, William Endress, Eli Schilling, Doug Hood, Jayant Sharma, Kishore Katta, Julian Dontcheff, Paul Parkinson, Chaitanya Koratamaddi, Vishal Singh, Melliyal Annamalai, Maria Colgan
-* **Last Updated By/Date** - Priscila Iruela, August 2025
+* **Last Updated By/Date** - Priscila Iruela, October 2025
