@@ -30,4 +30,4 @@ To complete this course:
 ## Acknowledgements
 * **Author** - Madhusudhan Rao, Principal Product Manager Oracle Database, Priscila Iruela, Senior Principal Technical Program Manager
 * **Contributors** -  Ankita Beri, Apoorva Srinivas, Beda Hammerschmidt, Jayant Mahto, Russ Lowenthal, Markus Michalewicz, Mark Hornick, Denise Myrick, Ramu Murakami, David Lapp, Mike Blackmore, Sean Stacey, William Endress, Eli Schilling, Doug Hood, Jayant Sharma, Kishore Katta, Julian Dontcheff, Paul Parkinson, Chaitanya Koratamaddi, Vishal Singh, Melliyal Annamalai, Maria Colgan
-* **Last Updated By/Date** - Priscila Iruela, October 2025
+* **Last Updated By/Date** - Priscila Iruela, July 2026

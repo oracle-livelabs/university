@@ -13,4 +13,4 @@ Generative AI enables users to quickly generate new content based on a variety o
 Estimated Lab Time: 60 minutes
 
 ## Task 1: Click on the URL below to start the lab:
-[Introduction to Generative AI using Select AI](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3831)
+[Introduction to Generative AI using Select AI](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=4222)
